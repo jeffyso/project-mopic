@@ -1,0 +1,13 @@
+
+ .container{
+    flex:1;
+    display: flex; 
+    justify-content: center;
+    align-items: center ;
+    height: 100%;
+    background-color: rgb(118, 223, 255);
+    
+  }
+  .hero-text{
+       font-size: 3rem;
+  }

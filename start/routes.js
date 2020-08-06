@@ -1,5 +1,7 @@
 'use strict'
 
+const AuthController = require('../app/Controllers/Http/AuthController');
+
 /*
 |--------------------------------------------------------------------------
 | Routes
@@ -17,3 +19,9 @@
 const Route = use('Route')
 
 Route.on('/').render('welcome')
+
+
+Route.get("/login","AuthController.login");
+Route.post("/login","AuthController.loginUser");
+
+Route.get("/register","AuthController.register");
