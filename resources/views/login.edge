@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+{{ style("css/login") }}
+{{ style("css/reset") }}
+
+<body>
+    <div class="container">
+        <div class="content-container">
+        <span class="hero"> Login{{ name + age }} </span>
+
+        @if(age >= 20)
+            <span>You are adult</span>
+        @else
+            <span>You are Young</span>
+        @endif
+    <ul>
+        @each(friend in friend)
+            <li><p>{{ friend }}</p></li>
+        @endeach
+    </ul>
+<p>{{ address.postcode }}</p>
+<img src="{{assetsUrl('jojo.png
+')}}"/>
+        </div>
+    </div>
+</body>
+</html>
