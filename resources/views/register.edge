@@ -1,23 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, intial-scale=1.0">
-      
+@layout("layout")
 
-        <title>Register</title>
-        {{style("CSS/reset")}}
-         {{style("CSS/login")}}
-    </head>
+@section('style-section')
+         {{style("CSS/main")}}
+         {{style("CSS/register")}}
+   @endsection 
 
-<body>
-<div class="container">
+   @section("content")
+
+   <div class="navbar">
+       <div class="text-z-index">
+        <ul>
+            <li><a  href=""></a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="news">News</a></li>
+            <li><a href="movies">Movies</a></li>
+            <li style="float:right"><a href=""></a></li>
+            <li class="active"  style="float:right"><a href="login">Login</a></li>
+          </ul>
+       </div>
+   </div>
+   <div class="container background-color">
    
-    <span class="hero-text">    
-        Register 
-    </span>
+       
+    <div class="box-container">
+    <div class="box">
+    <div class="head-text">
+      <div>Register</div>
+    </div>
+    <form method="POST" action="{{route('/register')}}">
+        {{csrfField()}} 
+        
+        <div class="text">
+
+          <input type="text" placeholder="email" name="email">
+           <input type="text" placeholder="username" name="username">
+           <input type="password" placeholder="Password" name="password">
+           <input type="password" placeholder="Confirm Password" name="cmpassword">
+         
+           <button type="submit">OK</button>
     
-    
-</div>
-</body>
-</html> 
+       <div>or</div>
+       
+       <div><a href="login"><h4>Login</h4></a></div>
+      </div>
+       </form>
+      
+     
+    </div>
+    </div>
+    </div>
+    <div class="footer">
+      <div class="images">
+        <img src="{{assetsUrl("img/001-facebook.png")}}">
+        <img src="{{assetsUrl("img/logo.png")}}">
+        <img src="{{assetsUrl("img/004-instagram.png")}}">
+        </div>
+    </div>
+@endsection
