@@ -1,12 +1,11 @@
-
-
-.box-container{
-    width: 30rem;
-    height:30rem;
-    background-color: #FF9295;
-    position: relative;
-    border-radius: 5%;
+.box-container {
+  width: 30rem;
+  height: 32rem;
+  background-color: #FF9295;
+  position: relative;
+  border-radius: 5%;
 }
+
 /* .box{
     width:3rem;
     height:3rem;
@@ -16,13 +15,13 @@
     right:0;
   } */
 
-  input{
-    margin-bottom: 2em;
-    font-size: 18px;
-    border: 3px 3px 3px 3px #790b54;
+input {
+  margin-bottom: 2em;
+  font-size: 16px;
+  border: 3px 3px 3px 0 #790b54;
 }
 
-button{
+button {
   background-color: rgb(255, 86, 117);
   border: none;
   color: white;
@@ -36,8 +35,7 @@ button{
 }
 
 .button:hover {
-    background-color: #790b54; /* Green */
-    color: white;
-  }
-
-
+  background-color: #790b54;
+  /* Green */
+  color: white;
+}

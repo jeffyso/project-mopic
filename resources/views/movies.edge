@@ -1,0 +1,39 @@
+@layout("layout")
+
+@section('style-section')
+         {{style("CSS/main")}}
+         {{style("CSS/news")}}
+   @endsection 
+
+   @section("content")
+
+   <div class="navbar">
+       <div class="text-z-index">
+        <ul>
+            <li><a></a></li>
+            <li><a  href="home">Home</a></li>
+            <li><a href="news">News</a></li>
+            <li><a class="active"  href="movies">Movies</a></li>
+            <li style="float:right"><a></a></li>
+            <li style="float:right"><a href="login">Login</a></li>
+          </ul>
+       </div>
+   </div>
+   <div class="container background-color">
+   </div>
+   <div class="footer">
+    <div class="images">
+       
+        <a href="https://www.facebook.com/don.jirapipat">
+         <img src="{{assetsUrl("img/001-facebook.png")}}">
+        </a>     
+
+        <img src="{{assetsUrl("img/logo.png")}}">
+
+        <a href="">
+         <img src="{{assetsUrl("img/004-instagram.png")}}">
+        </a>
+        
+    </div>
+   </div>
+    @endsection
