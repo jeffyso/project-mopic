@@ -20,8 +20,14 @@ const Route = use('Route')
 
 Route.on('/').render('welcome')
 
+Route.get("/home","AuthController.home");
 
 Route.get("/login","AuthController.login");
 Route.post("/login","AuthController.loginUser");
 
 Route.get("/register","AuthController.register");
+Route.post("/register","AuthController.registerUser");
+
+Route.get("/news","AuthController.news");
+
+Route.get("/movies","AuthController.movies");
