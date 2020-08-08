@@ -1,9 +1,11 @@
 @layout("layout")
 
 @section('style-section')
+{{style("CSS/main")}}
          {{style("CSS/login")}}
    @endsection 
 
+<<<<<<< HEAD
 @section("section")
 <div class="container">
 <form method="POST" action="{{route('/login')}}">
@@ -30,6 +32,49 @@
       </div>
        
    </form>
+=======
+@section("content")
+<div class="navbar">
+   <div class="text-z-index">
+    <ul>
+        <li><a  href=""></a></li>
+        <li><a  href="home">Home</a></li>
+        <li><a href="news">News</a></li>
+        <li><a href="movies">Movies</a></li>
+        <li style="float:right"><a href=""></a></li>
+        <li class="active" style="float:right"><a href="login">Login</a></li>
+      </ul>
+   </div>
+</div>
+
+<div class="container background-color">
+   <div class="box-container">
+      <div class="box">
+      <div class="head-text">
+        <div>Login</div>
+      </div>
+     <form method="POST" action="{{route('/login')}}">
+       {{csrfField()}} 
+        <div class="text">
+          <input type="text" placeholder="email" name="email">
+          <input type="text" placeholder="username" name="username">
+          <input type="password" placeholder="Password" name="password">
+          <button type="submit">OK</button>
+          <div>or</div>
+       
+          <div><a href="register"><h4>Register</h4></a></div>
+         </div>
+     </form>
+     </div>
+   </div>
+</div>
+<div class="footer">
+   <div class="images">
+   <img src="{{assetsUrl("img/001-facebook.png")}}">
+   <img src="{{assetsUrl("img/logo.png")}}">
+   <img src="{{assetsUrl("img/004-instagram.png")}}">
+   </div>
+>>>>>>> 298d905043cbad209bfd6b5f92c2baec3a8c0857
 </div>
 @endsection
 

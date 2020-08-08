@@ -17,8 +17,34 @@ class AuthController {
 
     register({ view }) {
 
+     register({view}) {
         return view.render("register");
     }
+
+   async registerUser({request,response}){
+        const {email,password,username} = request.body
+        // console.log(email,password)
+        await DB.insert({email,password,username}).into("users")
+        //หรือ  await Database.from("users").insert({email,password})
+        return response.redirect("/login")
+    }
+
+    news({view}){
+        return view.render("news");
+    }
+    
+    movies({view}){
+        return view.render("movies");
+    }
+
+    home({view}){
+        return view.render("home");
+    }
+}
+
+
+module.exports = AuthController
+
 
     async registerUser({ request, response }) {
         const { email, password,username } = request.body
