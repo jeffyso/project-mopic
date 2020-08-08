@@ -1,10 +1,10 @@
 
 .header{
-    background-image: url("img/parasite2.jpg");
     width: 100%;
-     background-repeat:no-repeat;
-     background-position: center top;
-     display:block;
-     margin:0px auto; 
-     
+    background-repeat:no-repeat;
+    background-position: center top;
+    display:block;
+    margin:0px auto; 
+    justify-content: center;
+    align-items: center;
    }
