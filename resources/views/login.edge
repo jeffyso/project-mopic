@@ -5,32 +5,50 @@
          {{style("CSS/login")}}
    @endsection 
 
-@section("section")
-<div class="container">
-<form method="POST" action="{{route('/login')}}">
-    {{csrfField()}} 
-    {{--  ต้องมีอันนี้ทุกครั้งถ้าส่งเป็นpost  --}}
-    
-       <label for="username">username</label>
-       <input type="text" name="username">
-
-       <label for="password">password</label>
-       <input type="password" name="password">
-
-       <button type="submit">Submit</button>
-
-       <div class="fb-login-button" 
-       data-size="large" 
-       data-button-type="continue_with" 
-       data-layout="rounded" 
-       data-auto-logout-link="false" 
-       data-use-continue-as="false" 
-       data-width=""
-       onlogin="checkLoginState();">
-       
+@section("content")
+<div class="navbar">
+   <div class="text-z-index">
+    <ul>
+      <div class="crop">
+        <li><a  href="home">Home</a></li>
+        <li><a href="news">News</a></li>
+        <li><a href="movies">Movies</a></li>
       </div>
+      <div class="crop-right">
+        <li class="active" style="float:right"><a href="login">Login</a></li>
+      </div>
+      </ul>
+   </div>
+</div>
+
+<div class="container background-color">
+   <div class="box-container">
+      <div class="box">
+      <div class="head-text">
+        <div>Login</div>
+      </div>
+     <form method="POST" action="{{route('/login')}}">
+       {{csrfField()}} 
+        <div class="text">
+          <input type="text" placeholder="email" name="email">
+         
+          <input type="text" placeholder="username" name="username"></li>
+          <input type="password" placeholder="Password" name="password">
+          <button type="submit">OK</button>
+          <div>or</div>
        
-   </form>
+          <div><a href="register"><h4>Register</h4></a></div>
+         </div>
+     </form>
+     </div>
+   </div>
+</div>
+<div class="footer">
+   <div class="images-contact">  
+    <a href="https://www.facebook.com/don.jirapipat" title="Contact">
+      <img src="{{assetsUrl("img/logo.png")}}">
+    </a>   
+   </div>
 </div>
 @endsection
 

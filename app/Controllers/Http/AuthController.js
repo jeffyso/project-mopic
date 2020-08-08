@@ -1,45 +1,65 @@
 'use strict'
-
-const DB = use("Database");
+const Database = use("Database")
 
 class AuthController {
     async login({ view, request, response }) {
 
-        return view.render("login");
+    
+        return view.render("login",{})
     }
-    loginUser({ view, request, response }) {
-        const { username, password } = request.body
+    async loginUser({ view, request, response }) {
+        const {username,password} =  request.body
 
-        //?{_csrf",username:"",password""}
+        const log = await Database.select('username','password').from('users')
+        if (username&password != log.username&log.password){
+            return response.redirect("/register")
+        }
+        else {
 
-        return response.redirect("/login")
+            return response.redirect("/home")
+        }
     }
+
+
+    // async loginUser({view,request,response}){
+
+    //     const ({username,password}) = request.body
+        
+    //     await Database.SELECT({username,password}).from("users"){
+    //         if (username == this.login.username){
+    //             return response.redirect("/home");
+    //         }
+    //     }
+    // }
+
 
     register({ view }) {
-
         return view.render("register");
     }
 
-    async registerUser({ request, response }) {
-        const { email, password,username } = request.body
-        await DB.from("users").insert({email,password,username})
-        // console.log(email, password)
+   async registerUser({request,response}){
+        const {email,password,username} = request.body
+        // console.log(email,password)
+        await Database.insert({email,password,username}).into("users")
+        //หรือ  await Database.from("users").insert({email,password})
         return response.redirect("/login")
     }
 
+    news({view}){
+        return view.render("news");
+    }
+    
+    movies({view}){
+        return view.render("movies");
+    }
+
+    home({view}){
+        return view.render("home");
+    }
 }
+
 
 module.exports = AuthController;
 
-         // const name = await DB.select("name","age")
-        //                      .from("user")
-        //                      .where({ "name: John" }) ;
-        //command Not = "<>" whereNot 
-        //command "*" select all table     
-        //const users = awiat DB.from("user");
-        // const name ="JZO"
-        // const age = 12
-        // const friend=["Sue","Bam","Friend","Fern"]
-        // const address= {
-        //     postcode : "10140", 
-        //     country:"Thailand",
+
+    

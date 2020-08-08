@@ -1,36 +1,61 @@
 @layout("layout")
 
 @section('style-section')
-         {{style("CSS/login")}}
+         {{style("CSS/main")}}
+         {{style("CSS/register")}}
    @endsection 
 
-@section("section")
-<form action="{{route('/register')}}" method="POST">
-    {{csrfField()}}
-<div class="container">
-    <span class="hero-text">
-        <label for="register">Register</label>
-        <div>
-            <label for="username">username</label> 
-            <input type="text" class="username" name="username"></div>
-            <div> 
-    <div>
-        <label for="email">Email</label> 
-        <input type="text" class="email" name="email"></div>
-        <div>
-            <label for="password">Password</label>
-            <input type="text" class="password" name="password">
-        </div>
-            <div>
-                <label for="confirm"> Confirm password</label>
-                <input type="text" class="confirmPw" name="confirm">
-            </div>
-                <div>
-                    <button type="submit" class="submit" name="submit">OK</button>
-                </div>
-            
-    </span>
-    </form>
-    
+   @section("content")
+   <div class="navbar">
+    <div class="text-z-index">
+     <ul>
+       <div class="crop">
+         <li><a href="home">Home</a></li>
+         <li><a href="news">News</a></li>
+         <li><a href="movies">Movies</a></li>
+       </div>
+         <div class="crop-right">
+         <li class="active"  style="float:right"><a href="login">Login</a></li>
+         </div>
+       </ul>
+    </div>
 </div>
+   
+   <div class="container background-color">
+   
+       
+    <div class="box-container">
+    <div class="box">
+    <div class="head-text">
+      <div>Register</div>
+    </div>
+    <form method="POST" action="{{route('/register')}}">
+        {{csrfField()}} 
+        
+        <div class="text">
+
+          <input type="text" placeholder="email" name="email">
+           <input type="text" placeholder="username" name="username">
+           <input type="password" placeholder="Password" name="password">
+           <input type="password" placeholder="Confirm Password" name="cmpassword">
+         
+           <button type="submit">OK</button>
+    
+       <div>or</div>
+       
+       <div><a href="login"><h4>Login</h4></a></div>
+      </div>
+       </form>
+      
+     
+    </div>
+    </div>
+    </div>
+    <div class="footer">
+      <div class="images-contact">  
+        <a href="https://www.facebook.com/don.jirapipat" title="Contact">
+          <img src="{{assetsUrl("img/logo.png")}}">
+        </a>   
+    </div>
+    </div>
 @endsection

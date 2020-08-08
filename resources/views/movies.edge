@@ -1,0 +1,37 @@
+@layout("layout")
+
+@section('style-section')
+         {{style("CSS/main")}}
+         {{style("CSS/movies")}}
+   @endsection 
+
+   @section("content")
+
+   <div class="navbar">
+       <div class="text-z-index">
+        <ul>
+          <div class="crop">
+            <li><a  href="home">Home</a></li>
+            <li><a href="news">News</a></li>
+            <li><a class="active"  href="movies">Movies</a></li>
+          </div>
+          <div class="crop-right">
+            <li style="float:right"><a href="login">Login</a></li>
+          </div>
+          </ul>
+       </div>
+   </div>
+   <div class="header">
+    <img src="{{assetsUrl("img/parasite2.jpg")}}">
+   </div>
+   <div class="container background-color">
+    
+   </div>
+   <div class="footer">
+    <div class="images-contact">  
+      <a href="https://www.facebook.com/don.jirapipat" title="Contact">
+        <img src="{{assetsUrl("img/logo.png")}}">
+      </a>   
+     </div>
+   </div>
+    @endsection
