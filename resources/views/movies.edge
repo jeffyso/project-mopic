@@ -2,7 +2,7 @@
 
 @section('style-section')
          {{style("CSS/main")}}
-         {{style("CSS/news")}}
+         {{style("CSS/movies")}}
    @endsection 
 
    @section("content")
@@ -10,30 +10,28 @@
    <div class="navbar">
        <div class="text-z-index">
         <ul>
-            <li><a></a></li>
+          <div class="crop">
             <li><a  href="home">Home</a></li>
             <li><a href="news">News</a></li>
             <li><a class="active"  href="movies">Movies</a></li>
-            <li style="float:right"><a></a></li>
+          </div>
+          <div class="crop-right">
             <li style="float:right"><a href="login">Login</a></li>
+          </div>
           </ul>
        </div>
    </div>
+   <div class="header">
+    
+  </div>
    <div class="container background-color">
+    
    </div>
    <div class="footer">
-    <div class="images">
-       
-        <a href="https://www.facebook.com/don.jirapipat">
-         <img src="{{assetsUrl("img/001-facebook.png")}}">
-        </a>     
-
+    <div class="images-contact">  
+      <a href="https://www.facebook.com/don.jirapipat" title="Contact">
         <img src="{{assetsUrl("img/logo.png")}}">
-
-        <a href="">
-         <img src="{{assetsUrl("img/004-instagram.png")}}">
-        </a>
-        
-    </div>
+      </a>   
+     </div>
    </div>
     @endsection

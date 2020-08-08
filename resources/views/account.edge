@@ -1,0 +1,35 @@
+@layout("layout")
+
+@section('style-section')
+{{style("CSS/main")}}
+         {{style("CSS/login")}}
+   @endsection 
+
+@section("content")
+<div class="navbar">
+   <div class="text-z-index">
+    <ul>
+        <li><a  href=""></a></li>
+        <li><a  href="home">Home</a></li>
+        <li><a href="news">News</a></li>
+        <li><a href="movies">Movies</a></li>
+        <li style="float:right"><a href=""></a></li>
+        <li class="active" style="float:right"><a href="#login">ACCOUNT</a></li>
+      </ul>
+   </div>
+</div>
+
+<div class="container background-color">
+   
+</div>
+
+<div class="footer">
+   <div class="images">
+   {{--  <img src="{{assetsUrl("img/001-facebook.png")}}">  --}}
+   <a href="https://www.facebook.com/don.jirapipat">
+      <img src="{{assetsUrl("img/logo.png")}}">
+     </a> 
+   {{--  <img src="{{assetsUrl("img/004-instagram.png")}}">  --}}
+   </div>
+</div>
+@endsection

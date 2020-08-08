@@ -10,22 +10,24 @@
    <div class="navbar">
        <div class="text-z-index">
         <ul>
-            <li><a></a></li>
+            <div class="crop">
             <li><a  class="active" href="home">Home</a></li>
             <li><a  href="news">News</a></li>
             <li><a href="movies">Movies</a></li>
-            <li style="float:right"><a></a></li>
+        </div> 
+        <div class="crop-right">
             <li style="float:right"><a href="login">Login</a></li>
-          </ul>
+        </div> 
+        </ul>
        </div>
    </div>
    <div class="container background-color">
    </div>
    <div class="footer">
-    <div class="images">
-        {{--  <img src="{{assetsUrl("img/001-facebook.png")}}">  --}}
-        <img src="{{assetsUrl("img/logo.png")}}">
-        {{--  <img src="{{assetsUrl("img/004-instagram.png")}}">  --}}
-        </div>
+    <div class="images-contact">  
+        <a href="https://www.facebook.com/don.jirapipat" title="Contact">
+          <img src="{{assetsUrl("img/logo.png")}}">
+        </a>   
+    </div>
    </div>
     @endsection
