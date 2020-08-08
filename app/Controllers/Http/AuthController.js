@@ -38,6 +38,25 @@ class AuthController {
     home({view}){
         return view.render("home");
     }
+
+    endgame({view}){
+        return view.render("endgame");
+    }
+
+    joker({view}){
+        return view.render("joker");
+    }
+    1917({view}){
+        return view.render("1917");
+    }
+
+    parasite({view}){
+        return view.render("parasite");
+    }
+
+    traintobusan({view}){
+        return view.render("traintobusan");
+    }
 }
 
 
