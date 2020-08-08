@@ -1,16 +1,36 @@
-@layout('layout')
+@layout("layout")
 
-@section("style-section")
-
-{{ style("css/login") }}
-
-@endsection
-
+@section('style-section')
+         {{style("CSS/login")}}
+   @endsection 
 
 @section("section")
-    <div class="container">
-        <div class="content-container">
-            <span class="hero">Register</span> 
+<form action="{{route('/register')}}" method="POST">
+    {{csrfField()}}
+<div class="container">
+    <span class="hero-text">
+        <label for="register">Register</label>
+        <div>
+            <label for="username">username</label> 
+            <input type="text" class="username" name="username"></div>
+            <div> 
+    <div>
+        <label for="email">Email</label> 
+        <input type="text" class="email" name="email"></div>
+        <div>
+            <label for="password">Password</label>
+            <input type="text" class="password" name="password">
         </div>
-    </div>
+            <div>
+                <label for="confirm"> Confirm password</label>
+                <input type="text" class="confirmPw" name="confirm">
+            </div>
+                <div>
+                    <button type="submit" class="submit" name="submit">OK</button>
+                </div>
+            
+    </span>
+    </form>
+    
+</div>
 @endsection

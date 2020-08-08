@@ -1,33 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+@layout("layout")
 
-{{ style("css/login") }}
-{{ style("css/reset") }}
+@section('style-section')
+         {{style("CSS/login")}}
+   @endsection 
 
-<body>
-    <div class="container">
-        <div class="content-container">
-        <span class="hero"> Login{{ name + age }} </span>
+@section("section")
+<div class="container">
+<form method="POST" action="{{route('/login')}}">
+    {{csrfField()}} 
+    {{--  ต้องมีอันนี้ทุกครั้งถ้าส่งเป็นpost  --}}
+    
+       <label for="username">username</label>
+       <input type="text" name="username">
 
-        @if(age >= 20)
-            <span>You are adult</span>
-        @else
-            <span>You are Young</span>
-        @endif
-    <ul>
-        @each(friend in friend)
-            <li><p>{{ friend }}</p></li>
-        @endeach
-    </ul>
-<p>{{ address.postcode }}</p>
-<img src="{{assetsUrl('jojo.png
-')}}"/>
-        </div>
-    </div>
-</body>
-</html>
+       <label for="password">password</label>
+       <input type="password" name="password">
+
+       <button type="submit">Submit</button>
+
+       <div class="fb-login-button" 
+       data-size="large" 
+       data-button-type="continue_with" 
+       data-layout="rounded" 
+       data-auto-logout-link="false" 
+       data-use-continue-as="false" 
+       data-width=""
+       onlogin="checkLoginState();">
+       
+      </div>
+       
+   </form>
+</div>
+@endsection
+
