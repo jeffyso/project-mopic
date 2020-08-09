@@ -41,3 +41,4 @@ Route.get("/1917","AuthController.1917");
 Route.get("/parasite","AuthController.parasite");
 
 Route.get("/traintobusan","AuthController.traintobusan");
+
