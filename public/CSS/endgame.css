@@ -186,3 +186,23 @@
   .rating:hover .wishlist-button {
     background-color:rgb(222, 74, 108);
   }
+/* 
+  .gallery {
+    position: relative;
+    display: inline;
+    margin: 5px;
+    border: 1px solid #ccc;
+    
+  }
+  
+  .gallery:hover {
+    border: 1px solid #777;
+  } */
+/*   
+  .gallery img {
+    position: relative;
+    
+    width: 100%;
+    height: auto;
+  }
+   */
