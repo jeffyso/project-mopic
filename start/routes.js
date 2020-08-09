@@ -31,3 +31,17 @@ Route.post("/register","AuthController.registerUser");
 Route.get("/news","AuthController.news");
 
 Route.get("/movies","AuthController.movies");
+
+Route.get("/endgame","AuthController.endgame");
+
+Route.get("/joker","AuthController.joker");
+
+Route.get("/1917","AuthController.1917");
+
+Route.get("/parasite","AuthController.parasite");
+
+Route.get("/traintobusan","AuthController.traintobusan");
+
+
+
+

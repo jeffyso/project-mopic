@@ -13,19 +13,11 @@ class AuthController {
         const {userform,password} =  request.body
         
         const data = await Database
-                             .select()
+                             .select("*")
                              .from('users')
-                             //.where({ username : jeffy ,password : 12345 })
-
-        if( data === true ){
-            return response.redirect("/register")
-        }
+                             .where({username,password})
+        console.log(data)
     }
-            
-
-
-   
-
 
     register({ view }) {
         return view.render("register");
@@ -49,6 +41,40 @@ class AuthController {
 
     home({view}){
         return view.render("home");
+    }
+
+    endgame({view}){
+        return view.render("endgame");
+    }
+
+    async endgameRate({request, response }) {
+        
+        const {rate} =  request.body;
+        let {user} = 0;
+        let {rateAverage} = 0;
+        let {total} = 0;
+        
+        while (rate != 0){
+            user = user+1
+            rateAverage = rateAverage+rate
+            total = rateAverage/user
+        }
+
+    }
+
+    joker({view}){
+        return view.render("joker");
+    }
+    1917({view}){
+        return view.render("1917");
+    }
+
+    parasite({view}){
+        return view.render("parasite");
+    }
+
+    traintobusan({view}){
+        return view.render("traintobusan");
     }
 }
 

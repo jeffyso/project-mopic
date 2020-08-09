@@ -1,10 +1,47 @@
 
-.header{
-    width: 100%;
-    background-repeat:no-repeat;
-    background-position: center top;
-    display:block;
-    margin:0px auto; 
+.container {
+    flex: 1;
+    display: flex;
     justify-content: center;
     align-items: center;
+    height: auto;
+    color: azure;
+    overflow: hidden;
+  }
+  
+.header{
+    display:block;
+    margin:0px 0 0 0; 
+ overflow: hidden;
    }
+
+   .img-movie{
+       display: inline-flex;
+       flex: 3;
+       position: relative;
+       overflow: hidden;
+       margin: 2rem 5rem 2rem 8rem;
+   }
+
+   .img-movie-blur{
+    display: inline-flex;
+    flex: 3;
+    position: relative;
+    overflow: hidden;
+   
+   }
+
+    .img-movie-blur:hover {
+    filter: blur(4px);
+    border: 0;
+    }
+
+    .text-movie{
+        font-size: 20px;
+        color: rgb(247, 193, 167);
+        margin: 0 5rem 2rem 0;
+    }
+
+    
+
+   

@@ -1,0 +1,112 @@
+@layout("layout")
+
+@section('style-section')
+         {{style("CSS/main")}}
+         {{style("CSS/endgame")}}
+   @endsection 
+
+   @section("content")
+
+   <div class="navbar">
+       <div class="text-z-index">
+        <ul>
+            <div class="crop">
+            <li><a  href="home">Home</a></li>
+            <li><a  href="news">News</a></li>
+            <li><a class="active" href="movies">Movies</a></li>
+        </div> 
+        <div class="crop-right">
+            <li style="float:right"><a href="login">Login</a></li>
+        </div> 
+        </ul>
+       </div>
+   </div>
+
+   
+   <div class="container background-color">
+       <div class="header">
+    <img src="{{assetsUrl("img/endgame2.jpg")}}">
+   </div>
+  
+   <div class="head-text">
+     THE AVENGERS: ENDGAME
+ </div>
+
+ <div class="details-container">
+    <div class="wishlist">
+       <img src="{{assetsUrl("img/addfav.png")}}">
+        <a button class="wishlist-button" href="login">
+            Add to wishlist
+            </a> 
+    </div>   
+</div>
+<div class="rating ">
+    <button class="wishlist-button">Rating </button>
+    <div class="dropdown-content">
+        <a href="login" name="rate" value=1>1</a>
+           <a href="login" name="rate" value=2 >2</a>
+           <a href="login" name="rate" value=3>3</a>
+           <a href="login" name="rate" value=4>4</a>
+           <a href="login" name="rate" valur=5>5</a>
+
+           <script>
+               const rating = 'rate';
+               
+           </script>
+        </div>
+</div>
+ 
+
+<div class="details-container">
+    <div class="datails">
+        DIRECTOR
+   </div>
+    <div class="sub-details">
+        Anthony Russo, Joe Russo
+    </div>
+</div>
+
+<div class="details-container">
+    <div class="datails2">
+        MAIN ACTORS
+   </div>
+    <div class="sub-details2">
+        Robert Downey Jr., Chris Evans, Mark Ruffalo
+    </div>
+</div>
+
+<div class="details-container">
+    <div class="datails3">
+        MUSIC BY
+   </div>
+    <div class="sub-details3">
+        Alan Silvestri
+    </div>
+</div>
+
+
+
+<div class="details-container">
+    <div class="trailer">
+        <div class=”videoWrapper”>
+<iframe width="460" height="215" 
+src="https://www.youtube.com/embed/TcMBFSGVi1c" 
+frameborder="0" allow="accelerometer; autoplay; 
+encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+   </div>
+
+
+
+   </div>
+   <div class="footer">
+    <div class="images-contact">  
+        <a href="https://www.facebook.com/don.jirapipat" title="Contact">
+          <img src="{{assetsUrl("img/logo.png")}}">
+        </a>   
+    </div>
+   </div>
+    @endsection
