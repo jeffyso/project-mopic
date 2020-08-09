@@ -15,8 +15,16 @@ class AuthController {
         const data = await Database
                              .select("*")
                              .from('users')
-                             .where({username,password})
-        console.log(data)
+                             .where({username: userform,password})
+        if(data.length){
+            return response.redirect('/home')
+        }
+        else{
+            return response.redirect('/register')
+        }
+
+        
+        
     }
 
     register({ view }) {
@@ -47,18 +55,8 @@ class AuthController {
         return view.render("endgame");
     }
 
-    async endgameRate({request, response }) {
-        
-        const {rate} =  request.body;
-        let {user} = 0;
-        let {rateAverage} = 0;
-        let {total} = 0;
-        
-        while (rate != 0){
-            user = user+1
-            rateAverage = rateAverage+rate
-            total = rateAverage/user
-        }
+    
+
 
     }
 
@@ -76,7 +74,7 @@ class AuthController {
     traintobusan({view}){
         return view.render("traintobusan");
     }
-}
+
 
 
 module.exports = AuthController;
