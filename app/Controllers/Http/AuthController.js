@@ -2,17 +2,28 @@
 const Database = use("Database")
 
 class AuthController {
-    async login({ view, request, response }) {
+    login({ view, request, response }) {
 
-    
         return view.render("login",{})
     }
-    loginUser({ view, request, response }) {
-        const {username,password} =  request.body
-        //? {_csrf:"",username:'}
-        // console.log(profile)
 
-        return response.redirect("/login")
+
+    async loginUser({request, response }) {
+        
+        const {userform,password} =  request.body
+        const data = await Database
+                             .select("*")
+                             .from('users')
+                             .where({username: userform,password})
+        if(data.length){
+            return response.redirect('/home')
+        }
+        else{
+            return response.redirect('/register')
+        }
+
+
+        
     }
 
     register({ view }) {
@@ -26,6 +37,8 @@ class AuthController {
         //หรือ  await Database.from("users").insert({email,password})
         return response.redirect("/login")
     }
+
+    
 
     news({view}){
         return view.render("news");
@@ -42,6 +55,11 @@ class AuthController {
     endgame({view}){
         return view.render("endgame");
     }
+    
+    endgameRate({request,response}){
+        const total = 0;
+        const {rate} = request.body
+    }
 
     joker({view}){
         return view.render("joker");
@@ -57,8 +75,8 @@ class AuthController {
     traintobusan({view}){
         return view.render("traintobusan");
     }
-}
 
+}
 
 module.exports = AuthController;
 

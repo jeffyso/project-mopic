@@ -33,6 +33,8 @@ Route.get("/news","AuthController.news");
 Route.get("/movies","AuthController.movies");
 
 Route.get("/endgame","AuthController.endgame");
+Route.get("/endgame","AuthController.endgameRate");
+
 
 Route.get("/joker","AuthController.joker");
 
