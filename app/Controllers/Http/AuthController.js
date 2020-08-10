@@ -11,7 +11,6 @@ class AuthController {
     async loginUser({request, response }) {
         
         const {userform,password} =  request.body
-        
         const data = await Database
                              .select("*")
                              .from('users')
@@ -23,7 +22,7 @@ class AuthController {
             return response.redirect('/register')
         }
 
-        
+
         
     }
 
@@ -39,6 +38,8 @@ class AuthController {
         return response.redirect("/login")
     }
 
+    
+
     news({view}){
         return view.render("news");
     }
@@ -53,12 +54,7 @@ class AuthController {
 
     endgame({view}){
         return view.render("endgame");
-    }
-
-    
-
-
-    }
+    }   
 
     joker({view}){
         return view.render("joker");
@@ -75,7 +71,7 @@ class AuthController {
         return view.render("traintobusan");
     }
 
-
+}
 
 module.exports = AuthController;
 
