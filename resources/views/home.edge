@@ -16,7 +16,10 @@
             <li><a href="movies">Movies</a></li>
         </div> 
         <div class="crop-right">
-            <li style="float:right"><a href="login">Login</a></li>
+            @if(token != 0)
+            <li style="float:right"><a href="login">Logout</a></li>
+            @else <li style="float:right"><a href="login">Logout</a></li>
+            @endif
         </div> 
         </ul>
        </div>
@@ -30,9 +33,5 @@
         </a>   
     </div>
    </div>
-   <script>
-       for(x in data){
-           console.log(x)
-       }
-   </script>
+   
     @endsection

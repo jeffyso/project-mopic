@@ -1,6 +1,8 @@
 'use strict'
 const Database = use("Database")
-
+let rating = 0;
+let token =0; 
+let user =0;
 class AuthController {
     login({ view, request, response }) {
 
@@ -16,9 +18,12 @@ class AuthController {
                              .from('users')
                              .where({username: userform,password})
         if(data.length){
+            token =+ 1;
+            console.log(token)
             return response.redirect('/home')
         }
         else{
+            token == 0;
             return response.redirect('/register')
         }
 
@@ -57,10 +62,13 @@ class AuthController {
     }
     
     endgameRate({request,response}){
-        const total = 0;
-        const {rate} = request.body
-    }
+        const {endgame} = request.body
+        if(endgame != 0){
+            user =+1;
+            rating = ((+endgame)+(+rating))/2;
+        }
 
+    }
     joker({view}){
         return view.render("joker");
     }

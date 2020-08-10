@@ -2,7 +2,7 @@
 
 @section('style-section')
          {{style("CSS/main")}}
-         {{style("CSS/endgame")}}
+         {{style("CSS/joker")}}
    @endsection 
 
    @section("content")
@@ -25,52 +25,49 @@
    
    <div class="container background-color">
        <div class="header">
-    <img src="{{assetsUrl("img/endgame2.jpg")}}">
+    <img src="{{assetsUrl("img/joker2.jpg")}}">
    </div>
   
    <div class="head-text">
-     THE AVENGERS: ENDGAME
+     JOKER
  </div>
 
- <div class="details-container">
-    <div class="wishlist">
-       <img src="{{assetsUrl("img/addfav.png")}}">
-        <a button class="wishlist-button" href="login">
-            Add to wishlist
-            </a> 
-    </div>   
-</div>
-<form action="{{route('/endgame')}}" method="post">
-    {{csrfField()}}     
-<div class="rating ">
-    <button class="wishlist-button" name="endgame">Rating </button>
-    <div class="dropdown-content">
-        <input type="checkbox" name="endgame" value=1>1</input>
-        <input type="checkbox" name="endgame" value=2>2</input>
-        <input type="checkbox" name="endgame" value=3>3</input>
-        <input type="checkbox" name="endgame" value=4>4</input>
-        <input type="checkbox" name="endgame" value=5>5</input>
-    </div><button type="submit">OK</button>
+ 
+    <div class="details-container">
+        <div class="wishlist">
+           <img src="{{assetsUrl("img/addfav.png")}}">
+            <a button class="wishlist-button" href="login">
+                Add to wishlist
+                </a> 
+        </div>   
 </div>
 
-</form>
- 
+   <div class="rating ">
+       <button class="wishlist-button">Rating </button>
+       <div class="dropdown-content">
+        <a href="login">1</a>
+        <a href="login">2</a>
+        <a href="login">3</a>
+        <a href="login">4</a>
+        <a href="login">5</a>
+           </div>
+   </div>
 
 <div class="details-container">
     <div class="datails">
         DIRECTOR
    </div>
     <div class="sub-details">
-        Anthony Russo, Joe Russo
+        Todd Phillips
     </div>
 </div>
 
 <div class="details-container">
     <div class="datails2">
-        MAIN ACTORS
+        MAIN ACTOR
    </div>
     <div class="sub-details2">
-        Robert Downey Jr., Chris Evans, Mark Ruffalo
+        Joaquin Phoenix
     </div>
 </div>
 
@@ -79,26 +76,21 @@
         MUSIC BY
    </div>
     <div class="sub-details3">
-        Alan Silvestri
+        Hildur Guðnadóttir
     </div>
 </div>
-
-
 
 <div class="details-container">
     <div class="trailer">
         <div class=”videoWrapper”>
-<iframe width="460" height="215" 
-src="https://www.youtube.com/embed/TcMBFSGVi1c" 
-frameborder="0" allow="accelerometer; autoplay; 
-encrypted-media; gyroscope; picture-in-picture" 
-allowfullscreen></iframe>
+            <iframe width="460" height="215" 
+            src="https://www.youtube.com/embed/zAGVQLHvwOY" 
+            frameborder="0" allow="accelerometer; autoplay; 
+            encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
         </div>
     </div>
 </div>
-   </div>
-
-
 
    </div>
    <div class="footer">
