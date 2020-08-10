@@ -2,7 +2,8 @@
 
 @section('style-section')
          {{style("CSS/main")}}
-         {{style("CSS/news")}}
+         {{style("CSS/home")}}
+         {{style("CSS/movies")}}
    @endsection 
 
    @section("content")
@@ -21,8 +22,81 @@
         </ul>
        </div>
    </div>
-   <div class="container background-color">
+   <div class=" background-color">
+       <div class="container">
+         <div class="home-header">
+           <img src="{{assetsUrl("img/header.jpg")}}">  
+         </div>
+         
+         <a button class="information-button" href="1917" >
+             More Informations 
+             <img src="{{assetsUrl("img/arrow.png")}}">
+         </a>
+       </div>
+
+       <div class="container">
+          <div class="news-text">
+              News
+          </div>
+       </div>
+       
+       <div class="container">
+          <div class="news">
+                <img src="{{assetsUrl("img/jokerIcon.jpg")}}">
+                <div class="desc">
+                    Add a description of the image here
+                </div>
+          </div>
+          <div class="news">
+            <img src="{{assetsUrl("img/jokerIcon.jpg")}}">
+            <div class="desc">
+                Add a description of the image here
+            </div>
+          </div>
+         <div class="news">
+           <img src="{{assetsUrl("img/jokerIcon.jpg")}}">
+             <div class="desc">
+               Add a description of the image here
+            </div>
+        </div>
+       </div>
+
+        <div class="container">
+            <div class="news-text">
+                TOP MOVIES
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="img-movie">
+                <a href="endgame" title="The Avengers: Endgame">     
+                  <div class="img-movie-blur">
+                      <img src="{{assetsUrl("img/endgame1.jpg")}}">
+                  </div>         
+                </a>
+           </div>
+          
+              <div class="img-movie">
+                <a href="joker" title="Joker">
+                  <div class="img-movie-blur">
+                   <img src="{{assetsUrl("img/joker1.jpg")}}">
+                  </div>
+                </a>
+              </div>
+          
+              <div class="img-movie">
+                <a href="1917" title="1917">
+                  <div class="img-movie-blur">
+                    <img src="{{assetsUrl("img/1917-1.jpg")}}">
+                  </div>
+                </a>
+              </div>
+          
+        </div>
+
+
    </div>
+
    <div class="footer">
     <div class="images-contact">  
         <a href="https://www.facebook.com/don.jirapipat" title="Contact">
