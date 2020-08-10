@@ -1,0 +1,54 @@
+
+
+.home-header {
+  height: auto;
+  background-size: cover;
+}
+
+.news-text {
+    color: rgb(247, 193, 167);
+  position: relative;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.information-button{
+    
+    position: absolute;
+    background-color: rgb(222, 74, 108);
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    top:25rem;
+    right: 5rem;
+    border-radius: 5%;
+    text-decoration: none;
+}
+
+.information-button:hover {
+    background-color:rgb(255, 146, 149);
+}
+
+.news {
+    margin: 5rem;
+  border: 1px solid #ccc;
+  float: left;
+  width: 20rem;
+  }
+  
+  .news:hover {
+    border: 1px solid #777;
+  }
+  
+  .news img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .desc {
+    padding: 15px;
+    text-align: center;
+  }
+
