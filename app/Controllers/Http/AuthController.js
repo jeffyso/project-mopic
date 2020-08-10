@@ -54,7 +54,12 @@ class AuthController {
 
     endgame({view}){
         return view.render("endgame");
-    }   
+    }
+    
+    endgameRate({request,response}){
+        const total = 0;
+        const {rate} = request.body
+    }
 
     joker({view}){
         return view.render("joker");
