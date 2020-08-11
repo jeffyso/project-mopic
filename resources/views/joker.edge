@@ -10,8 +10,9 @@
    <div class="text-z-index">
     <ul>
       <div class="crop">
-        <li style="float:left"><img src="{{assetsUrl("img/logo.png")}}"> </li>
-          </div>
+        <a href="home">
+            <li style="float:left"><img src="{{assetsUrl("img/logo.png")}}"> </li>
+            </a></div>
          <div class="crop-right">  
 
           <li style="float:right"><a href="login">Login</a></li>
@@ -22,8 +23,8 @@
       </ul>
   </div>
 
-   
-   <div class="container background-color">
+   <div class=" background-color">
+   <div class="container">
        <div class="header">
     <img src="{{assetsUrl("img/joker2.jpg")}}">
    </div>
@@ -42,16 +43,25 @@
         </div>   
 </div>
 
-   <div class="rating ">
-       <button class="wishlist-button">Rating </button>
-       <div class="dropdown-content">
-        <a href="login">1</a>
-        <a href="login">2</a>
-        <a href="login">3</a>
-        <a href="login">4</a>
-        <a href="login">5</a>
-           </div>
-   </div>
+<form action="{{route('/endgame')}}" method="post">
+    {{csrfField()}}     
+
+<div class="rating ">
+    
+    <button class="rating-button" >Rating 
+        <input type="radio" name="endgame" value=1>1</input>
+        <input type="radio" name="endgame" value=2>2</input>
+        <input type="radio" name="endgame" value=3>3</input>
+        <input type="radio" name="endgame" value=4>4</input>
+        <input type="radio" name="endgame" value=5>5</input>
+    </button></div>
+    <div class="rating-ok ">
+    <button class="wishlist-button" >OK</button>
+    </div>
+    <div class="rating-text">
+        Rating
+    </div>
+</form>
 
 <div class="details-container">
     <div class="datails">
@@ -91,13 +101,63 @@
         </div>
     </div>
 </div>
+   </div>
 
+   <div class="container">
+    <div class="news-text">
+        GALLERY
+    </div>
+ </div>
+    <div class="container">
+
+          <div class="gallery">
+           <a href="https://wall.alphacoders.com/big.php?i=1003220">
+                <img src="{{assetsUrl("img/joker3.jpg")}}">
+                <div class="desc">
+                    Joker 2019 wallpaper 1
+                  </div>
+           </a>
+          </div>
+
+          <div class="gallery">
+            <a href="https://wall.alphacoders.com/big.php?i=1012509">
+            <img src="{{assetsUrl("img/joker4.jpg")}}">
+            <div class="desc">
+                Joker 2019 wallpaper 2
+              </div>
+            </a>          
+          </div>
+
+         <div class="gallery">
+            <a href="https://wall.alphacoders.com/big.php?i=975508">
+           <img src="{{assetsUrl("img/joker5.jpg")}}">
+           <div class="desc">
+            Joker 2019 wallpaper 3
+          </div>
+            </a>
+         </div>
+       </div>
+
+       <div class="container">
+        <div class="gallery">
+         <a href="https://wall.alphacoders.com/big.php?i=1001031">
+              <img src="{{assetsUrl("img/joker6.jpg")}}">
+              <div class="desc">
+                Joker 2019 wallpaper 4
+              </div>
+         </a>
+        </div>
+        
+     </div>
    </div>
    <div class="footer">
     <div class="images-contact">  
-        <a href="https://www.facebook.com/don.jirapipat" title="Contact">
+        <a href="https://www.facebook.com/kittipong.srikittichai" title="Contact">
           <img src="{{assetsUrl("img/logo.png")}}">
         </a>   
     </div>
+    <div class="foot-text"> 
+        © 2020 Created By Team Project CAMT DII TEAM 5
+      </div>
    </div>
     @endsection
