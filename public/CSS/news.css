@@ -34,3 +34,35 @@
   .news a{
     text-decoration: none;
   }
+
+  .text p{
+    display: flex;
+    flex: 1;
+    
+    font-size: 20px;  
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 5rem 2px 5rem;
+  }
+
+  .img-margin{
+    margin: 0 0 3rem 5rem;
+    right: 5rem;
+  }
+
+  .references{
+    text-align: center;
+    font-size: 16px;
+    border-top: 1px solid white;
+    margin-bottom: 3rem;
+    padding-top: 0.5rem;
+    
+  }
+
+  .references a{
+     text-decoration: none;
+  }
+
+  .references a:hover{
+    color:  rgb(222, 74, 108);
+ }
