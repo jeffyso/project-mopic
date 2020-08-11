@@ -84,6 +84,16 @@ class AuthController {
         return view.render("traintobusan");
     }
 
+    news1({view}){
+        return view.render("news1");
+    }
+
+    news2({view}){
+        return view.render("news2");
+    }
+    news3({view}){
+        return view.render("news3");
+    }
 }
 
 module.exports = AuthController;
