@@ -10,8 +10,14 @@
    <div class="text-z-index">
     <ul>
       <div class="crop">
+<<<<<<< HEAD
         <li style="float:left"><img src="{{assetsUrl("img/logo.png")}}"> </li>
           </div>
+=======
+        <a href="home">
+            <li style="float:left"><img src="{{assetsUrl("img/logo.png")}}"> </li>
+            </a></div>
+>>>>>>> 84de42237394ad70e22f5967b9c2a08976466444
          <div class="crop-right">  
 
           <li style="float:right"><a href="login">Login</a></li>
@@ -22,8 +28,8 @@
       </ul>
   </div>
 
-   
-   <div class="container background-color">
+   <div class="background-color">
+   <div class="container ">
        <div class="header">
     <img src="{{assetsUrl("img/TrainToBusan2.jpg")}}">
    </div>
@@ -40,16 +46,27 @@
             </a> 
     </div>   
 </div>
-   <div class="rating ">
-       <button class="wishlist-button">Rating </button>
-       <div class="dropdown-content">
-           <a href="login">1</a>
-           <a href="login">2</a>
-           <a href="login">3</a>
-           <a href="login">4</a>
-           <a href="login">5</a>
-           </div>
-   </div>
+<form action="{{route('/traintobusan')}}" method="post">
+    {{csrfField()}}     
+
+<div class="rating ">
+    
+    <button class="rating-button" >Rating 
+        <input type="radio" name="traintobusan" value=1>1</input>
+        <input type="radio" name="traintobusan" value=2>2</input>
+        <input type="radio" name="traintobusan" value=3>3</input>
+        <input type="radio" name="traintobusan" value=4>4</input>
+        <input type="radio" name="traintobusan" value=5>5</input>
+    </button></div>
+    <div class="rating-ok ">
+    <button class="wishlist-button" >OK</button>
+    </div>
+    <div class="rating-text">
+        Rating
+    </div>
+
+
+</form>
 
 
 <div class="details-container">
@@ -92,11 +109,61 @@
 </div>
 
    </div>
+
+   <div class="container">
+    <div class="news-text">
+        GALLERY
+    </div>
+ </div>
+    <div class="container">
+
+          <div class="gallery">
+           <a href="https://wallpapercave.com/train-to-busan-wallpapers">
+                <img src="{{assetsUrl("img/TrainToBusan3.jpg")}}">
+                <div class="desc">
+                    Train To Busan wallpaper 1
+                  </div>
+           </a>
+          </div>
+
+          <div class="gallery">
+            <a href="https://wallpapercave.com/train-to-busan-wallpapers">
+            <img src="{{assetsUrl("img/TrainToBusan4.jpg")}}">
+            <div class="desc">
+                Train To Busan wallpaper 2
+              </div>
+            </a>          
+          </div>
+
+         <div class="gallery">
+            <a href="https://wallpapercave.com/train-to-busan-wallpapers">
+           <img src="{{assetsUrl("img/TrainToBusan5.jpg")}}">
+           <div class="desc">
+            Train To Busan wallpaper 3
+          </div>
+            </a>
+         </div>
+       </div>
+
+       <div class="container">
+        <div class="gallery">
+         <a href="https://wallpapercave.com/train-to-busan-wallpapers">
+              <img src="{{assetsUrl("img/TrainToBusan6.jpg")}}">
+              <div class="desc">
+                Train To Busan wallpaper 4
+              </div>
+         </a>
+        </div>
+        
+     </div>
    <div class="footer">
     <div class="images-contact">  
-        <a href="https://www.facebook.com/don.jirapipat" title="Contact">
+        <a href="https://www.facebook.com/kittipong.srikittichai" title="Contact">
           <img src="{{assetsUrl("img/logo.png")}}">
         </a>   
     </div>
+    <div class="foot-text"> 
+        © 2020 Created By Team Project CAMT DII TEAM 5
+      </div>
    </div>
     @endsection
