@@ -42,14 +42,15 @@
 <form action="{{route('/endgame')}}" method="post">
     {{csrfField()}}     
 <div class="rating ">
-    <button class="wishlist-button" name="endgame">Rating </button>
-    <div class="dropdown-content">
+    
+    <button class="rating-button" >Rating 
         <input type="checkbox" name="endgame" value=1>1</input>
         <input type="checkbox" name="endgame" value=2>2</input>
         <input type="checkbox" name="endgame" value=3>3</input>
         <input type="checkbox" name="endgame" value=4>4</input>
         <input type="checkbox" name="endgame" value=5>5</input>
-    </div><button type="submit">OK</button>
+    </button>
+    <button class="wishlist-button" >OK</button>
 </div>
 
 </form>
