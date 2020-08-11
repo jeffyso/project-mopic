@@ -44,3 +44,8 @@ Route.get("/parasite","AuthController.parasite");
 
 Route.get("/traintobusan","AuthController.traintobusan");
 
+Route.get("/news1","AuthController.news1");
+
+Route.get("/news2","AuthController.news2");
+
+Route.get("/news3","AuthController.news3");
