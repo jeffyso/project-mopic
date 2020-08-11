@@ -7,7 +7,6 @@
     height: auto;
     color: azure;
     overflow: hidden;
-    
   }
   
 .header{
@@ -19,6 +18,7 @@
    .img-movie{
        display: inline-flex;
        flex: 3;
+       
        position: relative;
        overflow: hidden;
        margin: 2rem 5rem 2rem 8rem;
@@ -42,9 +42,15 @@
         font-size: 20px;
         color: rgb(247, 193, 167);
         margin: 0 5rem 2rem 0;
-        text-decoration: none;
+        
     }
-
+    .img-movie a{
+  
+      text-decoration: none;
+    }
     
 
-   
+   .img-movie-margin{
+     margin-left: 12.8px;
+     margin-right: 14.5px;
+   }
