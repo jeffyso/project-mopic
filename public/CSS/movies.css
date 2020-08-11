@@ -7,6 +7,7 @@
     height: auto;
     color: azure;
     overflow: hidden;
+    
   }
   
 .header{
@@ -21,6 +22,7 @@
        position: relative;
        overflow: hidden;
        margin: 2rem 5rem 2rem 8rem;
+       
    }
 
    .img-movie-blur{
@@ -40,6 +42,7 @@
         font-size: 20px;
         color: rgb(247, 193, 167);
         margin: 0 5rem 2rem 0;
+        text-decoration: none;
     }
 
     

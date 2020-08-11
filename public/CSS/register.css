@@ -1,3 +1,8 @@
+
+.head-text{
+  color:white
+}
+
 .box-container {
   width: 30rem;
   height: 32rem;
@@ -25,17 +30,25 @@ button {
   background-color: rgb(255, 86, 117);
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 5px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   transition-duration: 0.4s;
   cursor: pointer;
+  margin-bottom: 1.5em;
 }
 
 .button:hover {
   background-color: #790b54;
-  /* Green */
   color: white;
 }
+
+.text a{
+  text-decoration: none;
+ }
+
+ .text a:hover{
+  color: rgb(247, 193, 167);
+ }
