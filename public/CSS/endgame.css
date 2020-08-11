@@ -196,6 +196,14 @@
     background-color:rgb(222, 74, 108);
   }
 
+  .rating-text{
+    position: absolute;
+    display: block;
+    bottom: 7.6rem;
+    left: 3.7rem;
+    font-size: 24px;
+  }
+
   .gallery {
     margin: 3rem;
   border: 1px 1px 1px 1px solid rgb(158, 13, 69);
