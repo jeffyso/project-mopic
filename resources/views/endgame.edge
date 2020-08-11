@@ -7,23 +7,24 @@
 
    @section("content")
 
-   <div class="navbar">
-       <div class="text-z-index">
-        <ul>
-            <div class="crop">
-            <li><a  href="home">Home</a></li>
-            <li><a  href="news">News</a></li>
-            <li><a class="active" href="movies">Movies</a></li>
-        </div> 
-        <div class="crop-right">
-            <li style="float:right"><a href="login">Login</a></li>
-        </div> 
-        </ul>
-       </div>
-   </div>
+   <div class="text-z-index">
+    <ul>
+      <div class="crop">
+        <a href="home">
+            <li style="float:left"><img src="{{assetsUrl("img/logo.png")}}"> </li>
+            </a></div>
+         <div class="crop-right">  
 
+          <li style="float:right"><a href="login">Login</a></li>
+        <li class="active"><a href="movies">Movies</a></li>
+        <li ><a href="news">News</a></li>
+      <li><a  href="home">Home</a></li>        
+      </div>
+      </ul>
+  </div>
    
-   <div class="container background-color">
+  <div class=" background-color">
+   <div class="container">
        <div class="header">
     <img src="{{assetsUrl("img/endgame2.jpg")}}">
    </div>
@@ -42,16 +43,20 @@
 </div>
 <form action="{{route('/endgame')}}" method="post">
     {{csrfField()}}     
+
 <div class="rating ">
-    <button class="wishlist-button" name="endgame">Rating </button>
-    <div class="dropdown-content">
-        <input type="checkbox" name="endgame" value=1>1</input>
-        <input type="checkbox" name="endgame" value=2>2</input>
-        <input type="checkbox" name="endgame" value=3>3</input>
-        <input type="checkbox" name="endgame" value=4>4</input>
-        <input type="checkbox" name="endgame" value=5>5</input>
-    </div><button type="submit">OK</button>
-</div>
+    
+    <button class="rating-button" >Rating 
+        <input type="radio" name="endgame" value=1>1</input>
+        <input type="radio" name="endgame" value=2>2</input>
+        <input type="radio" name="endgame" value=3>3</input>
+        <input type="radio" name="endgame" value=4>4</input>
+        <input type="radio" name="endgame" value=5>5</input>
+    </button></div>
+    <div class="rating-ok ">
+    <button class="wishlist-button" >OK</button>
+    </div>
+
 
 </form>
  
@@ -96,16 +101,52 @@ allowfullscreen></iframe>
     </div>
 </div>
 </div>
+<div class="container">
+    <div class="news-text">
+        GALLERY
+    </div>
+ </div>
+    <div class="container">
 
-<div class="container background-color">
+          <div class="gallery">
+           <a href="https://wall.alphacoders.com/big.php?i=1003220">
+                <img src="{{assetsUrl("img/endgame4.png")}}">
+                <div class="desc">
+                    The Avengers: Endgame wallpaper 1
+                  </div>
+           </a>
+          </div>
 
-      <div class="head-text">
-          Galleries
-      </div>
-    
-   
-  
-</div>
+          <div class="gallery">
+            <a href="https://wall.alphacoders.com/big.php?i=1012509">
+            <img src="{{assetsUrl("img/endgame5.jpg")}}">
+            <div class="desc">
+                The Avengers: Endgame wallpaper 2
+              </div>
+            </a>          
+          </div>
+
+         <div class="gallery">
+            <a href="https://wall.alphacoders.com/big.php?i=975508">
+           <img src="{{assetsUrl("img/endgame6.jpg")}}">
+           <div class="desc">
+            The Avengers: Endgame wallpaper 3
+          </div>
+            </a>
+         </div>
+       </div>
+
+       <div class="container">
+        <div class="gallery">
+         <a href="https://wall.alphacoders.com/big.php?i=1001031">
+              <img src="{{assetsUrl("img/endgame7.jpg")}}">
+              <div class="desc">
+                The Avengers: Endgame wallpaper 4
+              </div>
+         </a>
+        </div>
+        
+     </div>
 
    
 
@@ -118,5 +159,8 @@ allowfullscreen></iframe>
           <img src="{{assetsUrl("img/logo.png")}}">
         </a>   
     </div>
+    <div class="foot-text"> 
+        © 2020 Created By Team Project CAMT DII TEAM 5
+      </div>
    </div>
     @endsection

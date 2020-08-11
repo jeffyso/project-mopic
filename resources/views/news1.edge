@@ -1,0 +1,109 @@
+@layout("layout")
+
+@section('style-section')
+         {{style("CSS/main")}}
+         {{style("CSS/news")}}
+   @endsection 
+
+   @section("content")
+
+   <div class="text-z-index">
+    <ul>
+      <div class="crop">
+        <a href="home">
+        <li style="float:left"><img src="{{assetsUrl("img/logo.png")}}"> </li>
+        </a></div>
+         <div class="crop-right">  
+
+          <li style="float:right"><a href="login">Login</a></li>
+        <li><a href="movies">Movies</a></li>
+        <li  class="active"><a href="news">News</a></li>
+      <li><a  href="home">Home</a></li>        
+      </div>
+      </ul>
+  </div>
+
+   <div class="background-color">
+    <div class="container">
+        <div class="news-text">
+            Jared Leto Confirms Tron 3 With Emotional Post
+        </div>
+        
+     </div>
+     
+     <div class="container">
+        <img src="{{assetsUrl("img/news1.jpg")}}">
+     </div>
+
+     <div class="container">
+        <div class="text">
+            <p>
+            Jared Leto has confirmed that he will star in Tron 3. 
+            The original Tron hit theaters in 1982, starred Jeff Bridges,
+            and gave way for a new cinematic world. 
+            
+            The sequel, Tron: Legacy, was a more financial 
+            success than a critical one, and it starred 
+            Garrett Hedlund and Olivia Wilde in lead roles, 
+            with Jeff Bridges returning as well. While promising 
+            reports of a third film have been floating around 
+            since 2017, it was not developed quickly.
+            </p>
+
+            <p>
+                With Disney being the owner of the Tron 
+                property, it only makes sense that they 
+                would look to revive the franchise amidst 
+                the growing interest to revive older franchises. 
+                And clearly, despite Tron: Legacy coming out ten 
+                years ago, there is still a large fanbase for 
+                the franchise. Rumors of a film bringing back 
+                the characters from Legacy began to surface in 2010, 
+                but the project was eventually scrapped. 
+                Then, coming off of the positive reviews of 
+                Blade Runner 2049, Leto became attached to the movie 
+                in 2017.
+            </p>
+            
+        </div>
+     </div>
+
+     <div class="container">
+
+       <div class="img-margin">
+          <img src="{{assetsUrl("img/jared.jpg")}}">
+       </div>
+   <div class="text">
+     <p>
+       Now, Leto himself has confirmed on Instagram 
+       that he will be starring in the franchise's newest 
+       chapter. Leto confirmed his involvement while also 
+       revealing that the people involved with Tron 3 have 
+       some exciting things planned for the next film in the 
+       series.
+     </p> 
+  </div>
+   </div>
+
+   <div class="container">
+     <div class="references">
+       Reference: 
+       <a href="https://screenrant.com/tron-3-movie-sequel-jared-leto-cast-instagram/">
+       https://screenrant.com/tron-3-movie-sequel-jared-leto-cast-instagram/
+       </a>
+     </div>
+   </div>
+
+</div>
+
+   <div class="footer">
+    <div class="images-contact">  
+        <a href="https://www.facebook.com/kittipong.srikittichai" title="Contact">
+          <img src="{{assetsUrl("img/logo.png")}}">
+        </a>   
+    </div>
+    <div class="foot-text"> 
+      © 2020 Created By Team Project CAMT DII TEAM 5
+    </div>
+</div>
+    @endsection

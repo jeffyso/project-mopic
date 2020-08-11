@@ -10,6 +10,7 @@
   position: relative;
   font-size: 40px;
   font-weight: 700;
+  margin-top: 2.5rem;
 }
 
 .information-button{
@@ -30,21 +31,48 @@
 .information-button:hover {
     background-color:rgb(255, 146, 149);
 }
+.trailer{
+  position: absolute;
+  
+  top: 28rem;
+  left: 5rem;
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 10px;
+}
 
+.videoWrapper {
+position: relative;
+padding-bottom: 56.25%; /* 16:9 */
+padding-top: 25px;
+height: 0;
+}
+.videoWrapper iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 50%;
+height: 100%;
+}
 .news {
     margin: 5rem;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(158, 13, 69);
+  padding: 5px;
+  background-color:  rgb(222, 74, 108);
   float: left;
   width: 20rem;
+  border-radius: 5%;
+
   }
   
   .news:hover {
-    border: 1px solid #777;
+    border: 1px solid rgb(238, 162, 162);
   }
   
   .news img {
     width: 100%;
     height: auto;
+    border-radius: 5%;
   }
   
   .desc {
@@ -52,3 +80,20 @@
     text-align: center;
   }
 
+  .news a{
+    text-decoration: none;
+  }
+
+  .text-movie-home{
+    font-size: 20px;
+    color: rgb(247, 193, 167);
+    margin: 0 5rem 2rem 5rem;
+    text-align: center;
+    
+}
+
+
+
+ 
+
+  

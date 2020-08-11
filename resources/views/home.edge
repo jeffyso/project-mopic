@@ -8,24 +8,21 @@
 
    @section("content")
 
-   <div class="navbar">
-       <div class="text-z-index">
-        <ul>
-            <div class="crop">
-            <li><a  class="active" href="home">Home</a></li>
-            <li><a  href="news">News</a></li>
-            <li><a href="movies">Movies</a></li>
-        </div> 
-        <div class="crop-right">
-            @if(token != 0)
-            <li style="float:right"><a href="login">Logout</a></li>
-            @else 
-            <li style="float:right"><a href="login">Login</a></li>
-            @endif
-        </div> 
-        </ul>
-       </div>
-   </div>
+   <div class="text-z-index">
+    <ul>
+      <div class="crop">
+        <li style="float:left"><img src="{{assetsUrl("img/logo.png")}}"> </li>
+          </div>
+         <div class="crop-right">  
+
+         <li  style="float:right"><a href="login">{{ user }}}</a></li>
+        <li><a href="movies">Movies</a></li>
+        <li ><a href="news">News</a></li>
+      <li class="active"><a  href="home">Home</a></li>        
+      </div>
+      </ul>
+  </div>
+   
    <div class=" background-color">
        <div class="container">
          <div class="home-header">
@@ -36,6 +33,19 @@
              More Informations 
              <img src="{{assetsUrl("img/arrow.png")}}">
          </a>
+
+         <div class="details-container">
+          <div class="trailer">
+              <div class=”videoWrapper”>
+                <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/Oq4t3f6LmDA" 
+                frameborder="0" allow="accelerometer; autoplay; 
+                encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+              </div>
+          </div>
+      </div>
+         
        </div>
 
        <div class="container">
@@ -46,10 +56,12 @@
        
        <div class="container">
           <div class="news">
-                <img src="{{assetsUrl("img/jokerIcon.jpg")}}">
+            <a href="news1">
+                <img src="{{assetsUrl("img/news1.jpg")}}">
                 <div class="desc">
-                    Add a description of the image here
+                  Jared Leto Confirms Tron 3 With Emotional Post
                 </div>
+            </a>
           </div>
           <div class="news">
             <img src="{{assetsUrl("img/jokerIcon.jpg")}}">

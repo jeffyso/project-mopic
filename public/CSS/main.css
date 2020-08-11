@@ -9,6 +9,7 @@
 }
 
 .head-text {
+  color: rgb(247, 193, 167);
   margin-top: 2rem;
   font-size: 2rem;
   text-align: center;
@@ -17,7 +18,6 @@
 }
 
 .background-color {
-
   background-color: black;
 }
 
@@ -29,20 +29,8 @@
   font-size: px;
   font-weight: 100;
   margin-bottom: 2em;
-
-
 }
 
-.navbar {
-  
-  justify-content: center;
-  overflow-x: visible;
-
-  background-color: rgb(222, 74, 108);
-
-  z-index: 100;
-  
-}
 
 .text-z-index {
   position: relative;
@@ -60,7 +48,6 @@ a{
   padding: 0;
   overflow: hidden;
   background-color: rgb(222, 74, 108);
- 
   bottom: 0;
   width: 100%;
   height:10em auto;
@@ -74,5 +61,13 @@ a{
   padding: 2.5rem 5rem 1rem 5rem;
 }
 
-
-
+.foot-text{
+  display: flex;
+  flex:5;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+  color: white;
+}

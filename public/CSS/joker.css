@@ -15,7 +15,7 @@
 }
 
 .head-text {
-  
+  color: rgb(255, 255, 255);
     position: absolute;
     top: 8px;
     font-size: 8rem;
@@ -124,6 +124,7 @@
     cursor: pointer;
     bottom: 8px;
     left: 16px;
+    text-decoration: none;
   }
   
   .wishlist {

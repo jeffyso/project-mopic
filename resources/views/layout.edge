@@ -27,7 +27,7 @@
 }
 
 li {
-  float: left;
+  float:right;
   /* border-right:1px solid #bbb; */
 }
 
@@ -37,6 +37,7 @@ li:last-child {
 }
 
 li a {
+  float: right;
   display: block;
   color: rgb(247, 193, 167);
   font-size: 16px;
@@ -44,10 +45,17 @@ li a {
   position: relative;
   padding: 14px ;
   text-decoration: none;
+  
 }
 
 li a:hover:not(.active) {
   background-color: lightpink;
+}
+
+li img{
+  display: block;
+  position: relative;
+  padding: 14px ;
 }
 
 .active {
@@ -55,11 +63,11 @@ li a:hover:not(.active) {
 }
 
 .crop{
-  margin-left: 1rem; 
+  margin-left: 5rem; 
 }
 
 .crop-right{
-  margin-right: 1rem;
+  margin-right: 5rem;
 }
          </style>
     </head>

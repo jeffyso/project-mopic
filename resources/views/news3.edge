@@ -1,0 +1,92 @@
+@layout("layout")
+
+@section('style-section')
+         {{style("CSS/main")}}
+         {{style("CSS/news")}}
+   @endsection 
+
+   @section("content")
+
+   <div class="text-z-index">
+    <ul>
+      <div class="crop">
+        <a href="home">
+        <li style="float:left"><img src="{{assetsUrl("img/logo.png")}}"> </li>
+        </a></div>
+         <div class="crop-right">  
+
+          <li style="float:right"><a href="login">Login</a></li>
+        <li><a href="movies">Movies</a></li>
+        <li  class="active"><a href="news">News</a></li>
+      <li><a  href="home">Home</a></li>        
+      </div>
+      </ul>
+  </div>
+
+   <div class="background-color">
+    <div class="container">
+        <div class="news-text">
+            Hulu’s Books of Blood Movie Based On Horror Anthology Gets Poster & Release Date
+        </div>
+        
+     </div>
+     
+     <div class="container">
+        <img src="{{assetsUrl("img/news3.jpg")}}">
+     </div>
+
+     <div class="container">
+        <div class="text">
+            <p>
+                Hulu’s upcoming film adaptation of Clive Barker’s 1980s 
+                horror anthology book series Books of Blood has been 
+                given an official release date, as well as a proper 
+                poster reveal. The film, which was announced last year, 
+                is directed by Brannon Braga, with Seth MacFarlane onboard 
+                as executive producer, and a cast that includes Andy McQueen, 
+                Freda Foh Shen, Anna Friel, and Rafi Gavron.
+            </p>
+
+            <p>
+              The film – the latest in a long string of screen 
+              adaptations of Barker’s macabre stories – will hit 
+              Hulu on October 7th. The poster shows a human face 
+              becoming a worn, tattered tome in a scream-like image 
+              that’s somewhere between René Magritte and Guillermo Del Toro.
+               The tagline at the bottom of the poster reads 
+               “All Stories End Here.
+            </p>
+            
+        </div>
+     </div>
+
+     <div class="container">
+
+       <div class="img-margin">
+          <img src="{{assetsUrl("img/BooksOfBlood.jpg")}}">
+       </div>
+
+   </div>
+
+   <div class="container">
+     <div class="references">
+       Reference: 
+       <a href="https://screenrant.com/clive-barker-books-blood-movie-hulu-release-date-2020/">
+        https://screenrant.com/clive-barker-books-blood-movie-hulu-release-date-2020/
+       </a>
+     </div>
+   </div>
+
+</div>
+
+   <div class="footer">
+    <div class="images-contact">  
+        <a href="https://www.facebook.com/kittipong.srikittichai" title="Contact">
+          <img src="{{assetsUrl("img/logo.png")}}">
+        </a>   
+    </div>
+    <div class="foot-text"> 
+      © 2020 Created By Team Project CAMT DII TEAM 5
+    </div>
+</div>
+    @endsection
