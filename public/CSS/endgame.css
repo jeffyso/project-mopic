@@ -132,6 +132,7 @@
     bottom: 8px;
     left: 16px;
     text-decoration: none;
+    ma
   }
   
   .wishlist {
@@ -180,34 +181,71 @@
     font-size: 15px;
     
   }
+  .rating-ok {
+    position: absolute;
+    display: inline-block;
+    bottom: 10rem;
+    left: 19rem;
+    font-size: 15px;
+    
+  }
+
   
   .rating:hover .dropdown-content {
     display: block;
   }
   
-  .rating:hover .wishlist-button {
+  .rating-ok:hover .wishlist-button {
     background-color:rgb(222, 74, 108);
   }
-/* 
+
   .gallery {
-    position: relative;
-    display: inline;
-    margin: 5px;
-    border: 1px solid #ccc;
-    
+    margin: 3rem;
+  border: 1px 1px 1px 1px solid rgb(158, 13, 69);
+  padding: 5px;
+  background-color:  rgb(222, 74, 108);
+  float: left;
+  width: 20rem;
+  border-radius: 5%;
+
   }
   
   .gallery:hover {
-    border: 1px solid #777;
-  } */
-/*   
+    border: 1px solid rgb(238, 162, 162);
+    width: 35rem;
+  height: auto;
+  transition: 1.5s;
+  
+  }
+  
   .gallery img {
-    position: relative;
-    
     width: 100%;
     height: auto;
+    border-radius: 5%;
   }
-   */
+  
+.gallery img:hover{
+  width: 35rem;
+  height: auto;
+  transition: 1.5s;
+}
+
+.gallery a{
+  text-decoration: none;
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.news-text {
+  color: rgb(247, 193, 167);
+position: relative;
+font-size: 40px;
+font-weight: 700;
+margin-top: 2.5rem;
+}
    .rating-button {
     position: relative;
     background-color: rgb(255, 146, 149);
