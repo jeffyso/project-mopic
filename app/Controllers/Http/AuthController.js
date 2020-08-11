@@ -61,14 +61,14 @@ class AuthController {
         return view.render("endgame");
     }
     
-    endgameRate({request,response}){
-        const {endgame} = request.body
-        if(endgame != 0){
-            user =+1;
-            rating = ((+endgame)+(+rating))/2;
-        }
+    // endgameRate({request,response}){
+    //     const {endgame} = request.body
+    //     if(endgame != 0){
+    //         user =+1;
+    //         rating = ((+endgame)+(+rating))/2;
+    //     }
 
-    }
+    // }
     joker({view}){
         return view.render("joker");
     }
