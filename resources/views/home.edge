@@ -13,13 +13,15 @@
       <div class="crop">
         <li style="float:left"><img src="{{assetsUrl("img/logo.png")}}"> </li>
           </div>
-         <div class="crop-right">  
+         <div class="crop-right"> 
 
-<<<<<<< HEAD
-         <li  style="float:right"><a href="login">{{ user }}}</a></li>
-=======
-          <li  style="float:right"><a href="login">Login</a></li>
->>>>>>> 3cdf9e8795a80368adb67730943c4b68f7cb08ec
+            @if(token != 0)
+         <li  style="float:right"><a href="login">
+            {{ user }}</a></li>
+            @else
+            <li  style="float:right"><a href="login">
+                login</a></li>
+            @endif
         <li><a href="movies">Movies</a></li>
         <li ><a href="news">News</a></li>
       <li class="active"><a  href="home">Home</a></li>        
