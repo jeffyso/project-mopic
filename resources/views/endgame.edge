@@ -39,21 +39,20 @@
             </a> 
     </div>   
 </div>
+<form action="{{route('/endgame')}}" method="post">
+    {{csrfField()}}     
 <div class="rating ">
-    <button class="wishlist-button">Rating </button>
+    <button class="wishlist-button" name="endgame">Rating </button>
     <div class="dropdown-content">
-        <a href="login" name="rate" value=1>1</a>
-           <a href="login" name="rate" value=2 >2</a>
-           <a href="login" name="rate" value=3>3</a>
-           <a href="login" name="rate" value=4>4</a>
-           <a href="login" name="rate" valur=5>5</a>
-
-           <script>
-               const rating = 'rate';
-               
-           </script>
-        </div>
+        <input type="checkbox" name="endgame" value=1>1</input>
+        <input type="checkbox" name="endgame" value=2>2</input>
+        <input type="checkbox" name="endgame" value=3>3</input>
+        <input type="checkbox" name="endgame" value=4>4</input>
+        <input type="checkbox" name="endgame" value=5>5</input>
+    </div><button type="submit">OK</button>
 </div>
+
+</form>
  
 
 <div class="details-container">
