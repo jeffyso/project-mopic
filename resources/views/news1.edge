@@ -13,9 +13,13 @@
         <a href="home">
         <li style="float:left"><img src="{{assetsUrl("img/logo.png")}}"> </li>
         </a></div>
-         <div class="crop-right">  
-
-          <li style="float:right"><a href="login">Login</a></li>
+        @if(token != 0)
+        <li  style="float:right"><a href="login">
+           {{ user }}</a></li>
+           @else
+           <li  style="float:right"><a href="login">
+               login</a></li>
+           @endif
         <li><a href="movies">Movies</a></li>
         <li  class="active"><a href="news">News</a></li>
       <li><a  href="home">Home</a></li>        
