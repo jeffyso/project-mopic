@@ -1,16 +1,16 @@
 'use strict'
 const Database = use("Database")
-let rating = 0;
-let token =0; 
-let user =0;
+let rating;
+let token; 
+let user ;
 class AuthController {
     login({ view, request, response }) {
 
-        return view.render("login",{})
+        return view.render("login",{token,user})
     }
 
 
-    async loginUser({request, response }) {
+    async loginUser({view,request, response }) {
         
         const {userform,password} =  request.body
         const data = await Database
@@ -19,7 +19,8 @@ class AuthController {
                              .where({username: userform,password})
         if(data.length){
             token =+ 1;
-            console.log(token)
+            user = userform;
+            console.log(user)
             return response.redirect('/home')
         }
         else{
@@ -30,7 +31,6 @@ class AuthController {
 
         
     }
-
     register({ view }) {
         return view.render("register");
     }
@@ -54,20 +54,20 @@ class AuthController {
     }
 
     home({view}){
-        return view.render("home");
+        return view.render("home",{token,user});
     }
 
     endgame({view}){
         return view.render("endgame");
     }
     
-    // endgameRate({request,response}){
+    // endgameRate({view,request,response}){
     //     const {endgame} = request.body
     //     if(endgame != 0){
-    //         user =+1;
-    //         rating = ((+endgame)+(+rating))/2;
+    //         user = (+user)+1;
+    //         rating = ((+endgame)+(+rating))/user;
     //     }
-
+    //     return view.render(rating)
     // }
     joker({view}){
         return view.render("joker");
