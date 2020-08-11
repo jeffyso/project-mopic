@@ -1,0 +1,145 @@
+@layout("layout")
+
+@section('style-section')
+         {{style("CSS/main")}}
+         {{style("CSS/news")}}
+   @endsection 
+
+   @section("content")
+
+   <div class="text-z-index">
+    <ul>
+      <div class="crop">
+        <a href="home">
+        <li style="float:left"><img src="{{assetsUrl("img/logo.png")}}"> </li>
+        </a></div>
+         <div class="crop-right">  
+
+          <li style="float:right"><a href="login">Login</a></li>
+        <li><a href="movies">Movies</a></li>
+        <li  class="active"><a href="news">News</a></li>
+      <li><a  href="home">Home</a></li>        
+      </div>
+      </ul>
+  </div>
+
+   <div class="background-color">
+    <div class="container">
+        <div class="news-text">
+            China box office: ‘Interstellar’ rerelease has strong opening
+        </div>
+        
+     </div>
+     
+     <div class="container">
+        <img src="{{assetsUrl("img/news2.jpg")}}">
+     </div>
+
+     <div class="container">
+        <div class="text">
+            <p>
+                Nolan has a huge fan base in China where 
+                audiences have long embraced his high-concept, 
+                twisty style of story-telling. Interstellar 
+                grossed $112m (RMB779.5m) when it was first 
+                released in China in November 2014. The rerelease, 
+                which ranked third in the weekend box office chart, 
+                stands as the biggest ’single day’ and ‘highest opening 
+                day’ gross since China reopened cinemas on July 20.
+            </p>
+
+            <p>
+                Universal’s Dolittle was the top-grossing 
+                film over the three-day weekend (July 31-August 2), 
+                taking $3.3m for a cumulative total of $11.8m. It was 
+                followed by the opening of local production, The Enigma 
+                Of Arrival, which grossed $3m over three days. 
+                Directed by Song Wen, also co-founder of the FIRST 
+                International Film Festival in Xining, the dark romantic 
+                drama had been scheduled to open in China in February.
+            </p>
+            
+        </div>
+     </div>
+
+     <div class="container">
+
+       <div class="img-margin">
+          <img src="{{assetsUrl("img/interstella.jpg")}}">
+       </div>
+   <div class="text">
+     <p>
+        The re-release of local title Sheep Without 
+        A Shepherd, a remake of Indian hit Drishyam, 
+        came in fourth over the weekend taking $2.4m for 
+        a cume of $180.4m, including its original gross. 
+        It was followed by local animation Mr Miao, which 
+        took $1.2m for a cume of $1.5m.
+     </p> 
+     <p>
+     Total box office for the three-day weekend 
+     was $17.5m, a fraction of normal summer weekend 
+     figures, but reflecting the social distancing measures 
+     in place as theatres slowly reopen. According to pandemic 
+     controls, Chinese cinemas are required to keep attendance 
+     under 30% capacity for each screening, customers are 
+     not allowed to sit in adjacent seats, masks must be 
+     worn and concession stands remain closed.
+     </p>
+    </div>
+   </div>
+
+   <div class="container">
+
+    <div class="img-margin">
+       <img src="{{assetsUrl("img/interstella2.jpg")}}">
+    </div>
+   </div>
+   <div class="container">
+    <div class="text">
+        <p>
+            However, despite the slow start, industry observers 
+            remain cautiously optimistic about how the world’s 
+            second biggest market is coming back to life: “We see 
+            the reopening of the China market to date as positive 
+            and encouraging, not only from the local perspective 
+            but for global markets generally,” said Artisan Gateway’s 
+            Rance Pow.
+        </p>
+        <p>
+            Meanwhile, Huayi Brothers’ long-delayed war 
+            epic The Eight Hundred has finally been given 
+            a release date and is set to open on August 21. 
+            The film had been set to open in summer 2019, but 
+            was hit by censorship problems due to its portrayal 
+            of China’s Nationalist army, which lost the civil war 
+            to the Communists in 1949. It was also pulled as the 
+            opening film of last year’s Shanghai International Film 
+            Festival.
+        </p>
+    </div>
+   </div>
+
+
+   <div class="container">
+     <div class="references">
+       Reference: 
+       <a href="https://www.screendaily.com/news/china-box-office-interstellar-rerelease-has-strong-opening/5152024.article">
+        https://www.screendaily.com/news/china-box-office-interstellar-rerelease-has-strong-opening/5152024.article
+       </a>
+     </div>
+   </div>
+
+</div>
+
+   <div class="footer">
+    <div class="images-contact">  
+        <a href="https://www.facebook.com/don.jirapipat" title="Contact">
+          <img src="{{assetsUrl("img/logo.png")}}">
+        </a>   
+    </div>
+    <div class="foot-text"> 
+      © 2020 Created By Team Project CAMT DII TEAM 5
+    </div>
+</div>
+    @endsection
