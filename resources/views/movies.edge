@@ -7,20 +7,20 @@
 
    @section("content")
 
-   <div class="navbar">
-       <div class="text-z-index">
-        <ul>
-          <div class="crop">
-            <li><a  href="home">Home</a></li>
-            <li><a href="news">News</a></li>
-            <li><a class="active"  href="movies">Movies</a></li>
+   <div class="text-z-index">
+    <ul>
+      <div class="crop">
+        <li style="float:left"><img src="{{assetsUrl("img/logo.png")}}"> </li>
           </div>
-          <div class="crop-right">
-            <li style="float:right"><a href="login">Login</a></li>
-          </div>
-          </ul>
-       </div>
-   </div>
+         <div class="crop-right">  
+
+          <li style="float:right"><a href="login">Login</a></li>
+        <li class="active"><a href="movies">Movies</a></li>
+        <li ><a href="news">News</a></li>
+      <li><a  href="home">Home</a></li>        
+      </div>
+      </ul>
+  </div>
    
    <div class="container header background-color">
     
@@ -33,7 +33,7 @@
         <div class="img-movie-blur">
             <img src="{{assetsUrl("img/endgame1.jpg")}}">
         </div>        
-       <div class="text-movie"> 
+       <div class="text-movie" > 
          The Avengers: Endgame
         </div>     
       </a>

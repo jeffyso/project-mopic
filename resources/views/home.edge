@@ -8,20 +8,21 @@
 
    @section("content")
 
-   <div class="navbar">
-       <div class="text-z-index">
-        <ul>
-            <div class="crop">
-            <li><a  class="active" href="home">Home</a></li>
-            <li><a  href="news">News</a></li>
-            <li><a href="movies">Movies</a></li>
-        </div> 
-        <div class="crop-right">
-            <li style="float:right"><a href="login">Login</a></li>
-        </div> 
-        </ul>
-       </div>
-   </div>
+   <div class="text-z-index">
+    <ul>
+      <div class="crop">
+        <li style="float:left"><img src="{{assetsUrl("img/logo.png")}}"> </li>
+          </div>
+         <div class="crop-right">  
+
+          <li  style="float:right"><a href="login">Login</a></li>
+        <li><a href="movies">Movies</a></li>
+        <li ><a href="news">News</a></li>
+      <li class="active"><a  href="home">Home</a></li>        
+      </div>
+      </ul>
+  </div>
+   
    <div class=" background-color">
        <div class="container">
          <div class="home-header">
@@ -42,10 +43,12 @@
        
        <div class="container">
           <div class="news">
-                <img src="{{assetsUrl("img/jokerIcon.jpg")}}">
+            <a href="news1">
+                <img src="{{assetsUrl("img/news1.jpg")}}">
                 <div class="desc">
-                    Add a description of the image here
+                  Jared Leto Confirms Tron 3 With Emotional Post
                 </div>
+            </a>
           </div>
           <div class="news">
             <img src="{{assetsUrl("img/jokerIcon.jpg")}}">
