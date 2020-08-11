@@ -71,7 +71,7 @@ class AuthController {
     }
 
     endgame({view}){
-        return view.render("endgame",{token,user});
+        return view.render("endgame",{token,user,rating});
     }
     
     endgameRate({view,request,response}){
