@@ -154,7 +154,14 @@ class AuthController {
     news3({view}){
         return view.render("news3");
     }
+
+    account({view}){
+        return view.render("account");
+    }
+
+    
 }
+
 
 module.exports = AuthController;
 
