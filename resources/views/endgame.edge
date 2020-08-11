@@ -15,8 +15,15 @@
             </a></div>
          <div class="crop-right">  
             @if(token != 0)
-            <li  style="float:right"><a href="login">
-               {{ user }}</a></li>
+            
+            <li  style="float:right" class="dropdown">
+                <a href="login" class="dropbtn">
+               {{ user }}
+            </a>
+               <div class="dropdown-content">
+                <a href="#">Logout</a>
+            </li>
+            
                @else
                <li  style="float:right"><a href="login">
                    login</a></li>
