@@ -2,6 +2,7 @@
 
 @section('style-section')
 {{style("CSS/main")}}
+{{style("CSS/account")}}
          
    @endsection 
 
@@ -32,8 +33,34 @@
      </ul>
  </div>
 
-<div class="container background-color">
-   
+ <div class="container background-color">
+    <div class="box-container">
+       <div class="box">
+       <div class="head-text">
+         <div>USERNAME</div>
+       </div>
+      <form method="POST" action="{{route('/login')}}">
+        {{csrfField()}} 
+         <div class="text">
+          
+          
+           <input type="text" placeholder="Your Name" name="#"></li>
+           <input type="number" placeholder="Age" name="#">
+          Date of Birth  <input type="date" placeholder="Date of Birth" name="#">
+           <div class="save">
+          <button type="submit">Save</button>
+           </div>
+         
+           
+          </div>
+          <div class="wishlist">
+            <a button class="wishlist-button" href="myWishlist">
+                My Wishlists
+                </a> 
+        </div>
+      </form>
+      </div>
+    </div>
 </div>
 
 <div class="footer">
