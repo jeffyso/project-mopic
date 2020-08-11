@@ -10,6 +10,7 @@
   position: relative;
   font-size: 40px;
   font-weight: 700;
+  margin-top: 2.5rem;
 }
 
 .information-button{
@@ -83,7 +84,15 @@ height: 100%;
     text-decoration: none;
   }
 
- 
+  .text-movie-home{
+    font-size: 20px;
+    color: rgb(247, 193, 167);
+    margin: 0 5rem 2rem 5rem;
+    text-align: center;
+    
+}
+
+
 
  
 
