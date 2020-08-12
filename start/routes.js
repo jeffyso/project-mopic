@@ -40,6 +40,7 @@ Route.post("/wishlist","AuthController.wishlistEndgame");
 
 
 Route.get("/joker","AuthController.joker");
+Route.post("/joker","AuthController.jokerRate");
 
 Route.get("/1917","AuthController.one");
 Route.post("/1917","AuthController.oneRate");
