@@ -164,7 +164,7 @@ class AuthController {
     // ตรงนี้ตั้งชื่ออย่างงี้ไม่ได้นะ
 
    one({view}){
-        return view.render("1917",{token,user,rating19});
+        return view.render("1917",{token,user,ratingone});
     }
 
 
