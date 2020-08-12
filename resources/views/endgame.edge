@@ -41,8 +41,13 @@
     <div class="rating-ok ">
     <button class="wishlist-button" >OK</button>
     </div>
+    
     <div class="rating-text">
+        @if(rating > 1)
+        {{rating}}
+        @else
         Rating
+        @endif
     </div>
 </form>
  
