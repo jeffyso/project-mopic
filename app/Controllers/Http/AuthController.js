@@ -469,9 +469,11 @@ class AuthController {
         return view.render("news3");
     }
 
-    logout({view,redirect,request}){
-        token == 0
-        return view.render("/home",token)
+    logout({view,response,request}){
+        
+        token = 0;
+        console.log(token)
+        return view.render("/home",{token})
     }
 }
 
