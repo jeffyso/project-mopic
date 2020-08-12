@@ -31,6 +31,15 @@ let sumJoker ={s1:0,s2:0,s3:0,s4:0,s5:0};
 let joke = {star1:0,star2:0,star3:0,star4:0,star5:0}
 
 
+//--------------------------------------------------------Parasite Variable---------------------------------------------------------------------
+
+
+let ratingPara=0;
+let totalPara=0;
+let sumUsePara = {user5:0,user4:0,user3:0,user2:0,user1:0}
+let sumPara ={s1:0,s2:0,s3:0,s4:0,s5:0};
+let para = {star1:0,star2:0,star3:0,star4:0,star5:0}
+
 //--------------------------------------------------------login---------------------------------------------------------------------
 
 class AuthController {
@@ -304,6 +313,69 @@ class AuthController {
 //--------------------------------------------------------parasite---------------------------------------------------------------------
     parasite({view}){
         return view.render("parasite");
+    }
+
+    parasiteRating({view,request,response}){
+
+        const {parasite} = request.body
+        
+        if(parasite == 5){
+            totalPara =  totalPara + 1;
+            para.star5 = parasite;
+            sumUsePara.user5 = sumUsePara.user5 + 1;
+            para.star5 = ( para.star5*sumUsePara.user5)
+            sumPara.s5 = sumPara.s5+ para.star5;
+            
+            // console.log("star :"+sum19.s5);
+            // console.log("user :"+total19);
+        }
+
+        else if(parasite == 4){
+            totalPara =  totalPara + 1;
+            para.star4 = parasite; //4
+            sumUsePara.user4 = sumUsePara.user4 + 1;
+            para.star4 = ( para.star4*sumUsePara.user4)
+            sumPara.s4 = sumPara.s4+ para.star4;
+            
+            
+        }
+
+        else if(parasite == 3){
+            totalPara =  totalPara + 1;
+            para.star3 = parasite;
+            sumUsePara.user3 = sumUsePara.user3 + 1;
+            para.star3 = ( para.star3*sumUsePara.user3)
+            sumPara.s3 = sumPara.s3+ para.star5;
+            
+            
+        }
+
+        else if(parasite == 2){
+            totalPara =  totalPara + 1;
+            para.star2 = parasite;
+            sumUsePara.user2 = sumUsePara.user2 + 1;
+            para.star2 = ( para.star2*sumUsePara.user2)
+            sumPara.s2 =sumPara.s2+ para.star2;
+            
+            
+        }
+        else if(parasite == 1){
+            totalPara =  totalPara + 1;
+            para.star1 = parasite;
+            sumUsePara.user1 = sumUsePara.user1 + 1;
+            para.star1 = ( para.star1*sumUsePara.user1)
+            sumPara.s1 = sumPara.s1+ para.star1;
+            
+            
+        }
+
+        ratingPara = sumPara.s1+sumPara.s2+sumPara.s3+sumPara.s4+sumPara.s5;
+        ratingPara = ratingPara/totalPara;
+
+            
+
+        return view.render("/parasite",{ratingPara})
+    
     }
 
 //--------------------------------------------------------traintobusan---------------------------------------------------------------------
