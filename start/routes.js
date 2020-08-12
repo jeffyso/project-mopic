@@ -39,17 +39,9 @@ Route.post("/endgame","AuthController.endgameRate");
 Route.get("/joker","AuthController.joker");
 
 Route.get("/1917","AuthController.1917");
+Route.post("/1917","AuthController.1917Wish");
 
 Route.get("/parasite","AuthController.parasite");
 
 Route.get("/traintobusan","AuthController.traintobusan");
-
-Route.get("/news1","AuthController.news1");
-
-Route.get("/news2","AuthController.news2");
-
-Route.get("/news3","AuthController.news3");
-
-Route.get("/account","AuthController.account");
-
 

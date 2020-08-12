@@ -22,7 +22,7 @@
          {{ user }}
       </a>
          <div class="dropdown-content">
-          <a href="#">Logout</a>
+          <a href="#" onclick="token" {{token == 0}}>Logout</a>
       </li>
              @else
              <li  style="float:right"><a href="login">
