@@ -21,6 +21,16 @@ let sum19 ={s1:0,s2:0,s3:0,s4:0,s5:0};
 let onenine = {star1:0,star2:0,star3:0,star4:0,star5:0}
 
 
+//--------------------------------------------------------Joker Variable---------------------------------------------------------------------
+
+
+let ratingJoker=0;
+let totalJoker=0;
+let sumUseJoker = {user5:0,user4:0,user3:0,user2:0,user1:0}
+let sumJoker ={s1:0,s2:0,s3:0,s4:0,s5:0};
+let joke = {star1:0,star2:0,star3:0,star4:0,star5:0}
+
+
 //--------------------------------------------------------login---------------------------------------------------------------------
 
 class AuthController {
@@ -158,10 +168,71 @@ class AuthController {
     joker({view}){
         return view.render("joker",{token,user});
     }
+    jokerRate({view,request,response}){
 
+        const {joker} = request.body
+
+        if(joker == 5){
+            totalJoker = totalJoker + 1;
+            joke.star5 = joker;
+            sumUseJoker.user5 = sumUseJoker.user5 + 1;
+            joke.star5 = (joke.star5*sumUseJoker.user5)
+            sumJoker.s5 = sumJoker.s5+joke.star5;
+            
+            // console.log("star :"+sum19.s5);
+            // console.log("user :"+total19);
+        }
+
+        else if(joker == 4){
+            totalJoker = totalJoker + 1;
+            joke.star4 = joker; //4
+            sumUseJoker.user4 = sumUseJoker.user4 + 1;
+            joke.star4 = (joke.star4*sumUseJoker.user4)
+            sumJoker.s4 = sumJoker.s4+joke.star4;
+            
+            
+        }
+
+        else if(joker == 3){
+            totalJoker = totalJoker + 1;
+            joke.star3 = joker;
+            sumUseJoker.user3 = sumUseJoker.user3 + 1;
+            joke.star3 = (joke.star3*sumUseJoker.user3)
+            sumJoker.s3 = sumJoker.s3+joke.star5;
+            
+            
+        }
+
+        else if(joker == 2){
+            totalJoker = totalJoker + 1;
+            joke.star2 = joker;
+            sumUseJoker.user2 = sumUseJoker.user2 + 1;
+            joke.star2 = (joke.star2*sumUseJoker.user2)
+            sumJoker.s2 = sumJoker.s2+joke.star2;
+            
+            
+        }
+        else if(joker == 1){
+            totalJoker = totalJoker + 1;
+            joke.star1 = joker;
+            sumUseJoker.user1 = sumUseJoker.user1 + 1;
+            joke.star1 = (joke.star1*sumUseJoker.user1)
+            sumJoker.s1 = sumJoker.s1+joke.star1;
+            
+            
+        }
+
+        ratingJoker = sumJoker.s1+sumJoker.s2+sumJoker.s3+sumJoker.s4+sumJoker.s5;
+        ratingJoker = ratingJoker/totalJoker;
+
+            
+
+        return view.render("/joker",{ratingJoker})
     
-//--------------------------------------------------------1917---------------------------------------------------------------------
-    // ตรงนี้ตั้งชื่ออย่างงี้ไม่ได้นะ
+        
+    }
+    
+//--------------------------------------------------------1917----------------------------------------------------------------------
 
    one({view}){
         return view.render("1917",{token,user,rating19});
@@ -223,7 +294,7 @@ class AuthController {
         }
 
         ratingone = sum19.s1+sum19.s2+sum19.s3+sum19.s4+sum19.s5;
-        ratingone = ratingone/total19;
+        ratingone = ratingJoker/totalJoker;
 
             
 
