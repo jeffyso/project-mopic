@@ -41,7 +41,11 @@
     <button class="wishlist-button" >OK</button>
     </div>
     <div class="rating-text">
+        @if(ratingPara > 1)
+        Rating: {{ratingPara}}
+        @else
         Rating
+        @endif
     </div>
 </form>
 
