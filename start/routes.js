@@ -36,12 +36,13 @@ Route.get("/movies","AuthController.movies");
 
 Route.get("/endgame","AuthController.endgame");
 Route.post("/endgame","AuthController.endgameRate");
+Route.post("/wishlist","AuthController.wishlistEndgame");
 
 
 Route.get("/joker","AuthController.joker");
 
-Route.get("/1917","AuthController.1917");
-Route.post("/1917","AuthController.1917Wish");
+Route.get("/1917","AuthController.one");
+Route.post("/1917","AuthController.oneRate");
 
 Route.get("/parasite","AuthController.parasite");
 
