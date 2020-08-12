@@ -46,6 +46,7 @@ Route.get("/1917","AuthController.one");
 Route.post("/1917","AuthController.oneRate");
 
 Route.get("/parasite","AuthController.parasite");
+Route.post("/parasite","AuthController.parasiteRating");
 
 Route.get("/traintobusan","AuthController.traintobusan");
 
