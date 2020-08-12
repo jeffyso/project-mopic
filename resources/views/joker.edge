@@ -27,23 +27,28 @@
         </div>   
 </div>
 
-<form action="{{route('/endgame')}}" method="post">
+<form action="{{route('/joker')}}" method="post">
     {{csrfField()}}     
 
 <div class="rating ">
     
     <button class="rating-button" >Rating 
-        <input type="radio" name="endgame" value=1>1</input>
-        <input type="radio" name="endgame" value=2>2</input>
-        <input type="radio" name="endgame" value=3>3</input>
-        <input type="radio" name="endgame" value=4>4</input>
-        <input type="radio" name="endgame" value=5>5</input>
+        <input type="radio" name="joker" value=1>1</input>
+        <input type="radio" name="joker" value=2>2</input>
+        <input type="radio" name="joker" value=3>3</input>
+        <input type="radio" name="joker" value=4>4</input>
+        <input type="radio" name="joker" value=5>5</input>
     </button></div>
     <div class="rating-ok ">
     <button class="wishlist-button" >OK</button>
     </div>
+
     <div class="rating-text">
+        @if(ratingJoker > 1)
+        {{ratingJoker}}
+        @else
         Rating
+        @endif
     </div>
 </form>
 
