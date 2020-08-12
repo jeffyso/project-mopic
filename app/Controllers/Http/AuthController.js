@@ -40,6 +40,16 @@ let sumUsePara = {user5:0,user4:0,user3:0,user2:0,user1:0}
 let sumPara ={s1:0,s2:0,s3:0,s4:0,s5:0};
 let para = {star1:0,star2:0,star3:0,star4:0,star5:0}
 
+//--------------------------------------------------------traintobusan Variable---------------------------------------------------------------------
+
+
+let ratingBusan=0;
+let totalBusan=0;
+let sumUseBusan = {user5:0,user4:0,user3:0,user2:0,user1:0}
+let sumBusan ={s1:0,s2:0,s3:0,s4:0,s5:0};
+let busan = {star1:0,star2:0,star3:0,star4:0,star5:0}
+
+
 //--------------------------------------------------------login---------------------------------------------------------------------
 
 class AuthController {
@@ -383,6 +393,67 @@ class AuthController {
         return view.render("traintobusan");
     }
 
+    trainRate({view,request,response}){
+
+        const {traintobusan} = request.body
+
+        if(traintobusan == 5){
+            totalBusan =  totalBusan + 1;
+            busan.star5 = traintobusan;
+            sumUseBusan.user5 = sumUseBusan.user5 + 1;
+            busan.star5 = ( busan.star5*sumUseBusan.user5)
+            sumBusan.s5 = sumBusan.s5+ busan.star5;
+        }
+
+        else if(traintobusan == 4){
+            totalBusan=  totalBusan + 1;
+            busan.star4 = traintobusan; //4
+            sumUseBusan.user4 = sumUseBusan.user4 + 1;
+            busan.star4 = ( busan.star4*sumUseBusan.user4)
+            sumBusan.s4 = sumBusan.s4+ busan.star4;
+            
+            
+        }
+
+        else if(traintobusan == 3){
+            totalBusan =  totalBusan + 1;
+            busan.star3 = traintobusan;
+            sumUseBusan.user3 = sumUseBusan.user3 + 1;
+            busan.star3 = ( busan.star3*sumUseBusan.user3)
+            sumBusan.s3 = sumBusan.s3+ busan.star5;
+            
+            
+        }
+
+        else if(traintobusan == 2){
+            totalBusan =  totalBusan + 1;
+            busan.star2 = traintobusan;
+            sumUseBusan.user2 = sumUseBusan.user2 + 1;
+            busan.star2 = ( busan.star2*sumUseBusan.user2)
+            sumBusan.s2 =sumBusan.s2+ busan.star2;
+            
+            
+        }
+        else if(traintobusan == 1){
+            totalBusan =  totalBusan + 1;
+            busan.star1 = traintobusan;
+            sumUseBusan.user1 = sumUseBusan.user1 + 1;
+            busan.star1 = ( busan.star1*sumUseBusan.user1)
+            sumBusan.s1 = sumBusan.s1+ busan.star1;
+            
+            
+        }
+
+        ratingBusan = sumBusan.s1+sumBusan.s2+sumBusan.s3+sumBusan.s4+sumBusan.s5;
+        ratingBusan = ratingBusan/totalBusan;
+
+            
+
+        return view.render("/traintobusan",{ratingBusan})
+
+        
+        
+    }
 //--------------------------------------------------------news1---------------------------------------------------------------------
     news1({view}){
         return view.render("news1");
