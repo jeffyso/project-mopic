@@ -33,17 +33,22 @@
 <div class="rating ">
     
     <button class="rating-button" >Rating 
-        <input type="radio" name="1917" value=1>1</input>
-        <input type="radio" name="1917" value=2>2</input>
-        <input type="radio" name="1917" value=3>3</input>
-        <input type="radio" name="1917" value=4>4</input>
-        <input type="radio" name="1917" value=5>5</input>
+        <input type="radio" name="one" value=1>1</input>
+        <input type="radio" name="one" value=2>2</input>
+        <input type="radio" name="one" value=3>3</input>
+        <input type="radio" name="one" value=4>4</input>
+        <input type="radio" name="one" value=5>5</input>
     </button></div>
     <div class="rating-ok ">
     <button class="wishlist-button" >OK</button>
     </div>
+    
     <div class="rating-text">
+        @if(ratingone > 1)
+        {{ ratingone }}
+        @else
         Rating
+        @endif
     </div>
 </form>
 
