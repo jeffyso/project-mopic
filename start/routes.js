@@ -22,6 +22,8 @@ Route.on('/').render('welcome')
 
 Route.get("/home","AuthController.home");
 
+Route.get("/layout","AuthController.logout");
+
 Route.get("/login","AuthController.login");
 Route.post("/login","AuthController.loginUser");
 
