@@ -51,3 +51,6 @@ Route.post("/parasite","AuthController.parasiteRating");
 Route.get("/traintobusan","AuthController.traintobusan");
 Route.post("/traintobusan","AuthController.trainRate");
 
+Route.get("/wish","AuthController.wish");
+
+Route.get("/account","AuthController.account");
