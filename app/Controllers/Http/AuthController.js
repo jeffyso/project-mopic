@@ -235,7 +235,7 @@ class AuthController {
 //--------------------------------------------------------1917----------------------------------------------------------------------
 
    one({view}){
-        return view.render("1917",{token,user,rating19});
+        return view.render("1917",{token,user,ratingone});
     }
 
 
