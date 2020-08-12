@@ -36,6 +36,8 @@ Route.get("/movies","AuthController.movies");
 
 Route.get("/endgame","AuthController.endgame");
 Route.post("/endgame","AuthController.endgameRate");
+
+
 Route.post("/wishlist","AuthController.wishlistEndgame");
 
 
@@ -52,5 +54,11 @@ Route.get("/traintobusan","AuthController.traintobusan");
 Route.post("/traintobusan","AuthController.trainRate");
 
 Route.get("/wish","AuthController.wish");
+Route.get("/news1","AuthController.news1");
+
+Route.get("/news2","AuthController.news2");
+
+Route.get("/news3","AuthController.news3");
 
 Route.get("/account","AuthController.account");
+
