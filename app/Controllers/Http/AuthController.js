@@ -294,7 +294,7 @@ class AuthController {
         }
 
         ratingone = sum19.s1+sum19.s2+sum19.s3+sum19.s4+sum19.s5;
-        ratingone = ratingJoker/totalJoker;
+        ratingone = ratingone/total19;
 
             
 
