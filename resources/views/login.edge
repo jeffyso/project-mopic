@@ -7,32 +7,6 @@
 
 @section("content")
 
-  <div class="text-z-index">
-    <ul>
-      <div class="crop">
-        <a href="home">
-          <li style="float:left"><img src="{{assetsUrl("img/logo.png")}}"> </li>
-          </a></div>
-         <div class="crop-right">  
-          @if(token != 0)
-          <li  style="float:right" class="dropdown">
-            <a href="account" class="dropbtn">
-           {{ user }}
-        </a>
-           <div class="dropdown-content"
-            <a href="#">Logout</a>
-        </li>
-             @else
-             <li  style="float:right"><a href="login">
-                 login</a></li>
-             @endif
-        <li><a href="movies">Movies</a></li>
-        <li ><a href="news">News</a></li>
-      <li><a  href="home">Home</a></li>        
-      </div>
-      </ul>
-  </div>
-
 
 <div class="container background-img">
    <div class="box-container">
