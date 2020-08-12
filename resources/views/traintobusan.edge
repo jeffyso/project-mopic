@@ -42,7 +42,11 @@
     <button class="wishlist-button" >OK</button>
     </div>
     <div class="rating-text">
+        @if(ratingBusan > 1)
+        Rating: {{ratingBusan}}
+        @else
         Rating
+        @endif
     </div>
 
 
