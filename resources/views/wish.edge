@@ -1,0 +1,48 @@
+@layout("layout")
+
+@section('style-section')
+{{style("CSS/main")}}
+{{style("CSS/account")}}
+{{style("CSS/wish")}}
+         
+   @endsection 
+
+@section("content")
+
+<div class=" background-wish">
+ <div class="container">
+    <div class="box-container">
+       <div class="box">
+       <div class="head-text">
+         <div>USERNAME</div>
+       </div>
+      <form method="POST" action="{{route('/login')}}">
+        {{csrfField()}} 
+         <div class="text">
+
+                My Wishlists
+                <p>#moviename1</p>
+                <p>#moviename2</p>
+                <p>#moviename2</p>
+                <p>#moviename1</p>
+                <p>#moviename2</p>
+                <p>#moviename2</p>
+
+        </div>
+      </form>
+      </div>
+    </div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="images-contact">  
+   <a href="https://www.facebook.com/kittipong.srikittichai" title="Contact">
+     <img src="{{assetsUrl("img/logo.png")}}">
+   </a>   
+  </div>
+  <div class="foot-text"> 
+   © 2020 Created By Team Project CAMT DII TEAM 5
+ </div>
+</div>
+@endsection
