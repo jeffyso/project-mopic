@@ -475,6 +475,14 @@ class AuthController {
         console.log(token)
         return view.render("/home",{token})
     }
+
+    account({view}){
+        return view.render("account");
+    }
+
+    wish({view}){
+        return view.render("wish");
+    }
 }
 
 module.exports = AuthController;
