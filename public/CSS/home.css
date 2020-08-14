@@ -1,5 +1,9 @@
 
 
+img{
+  overflow-x: hidden;
+}
+
 .home-header {
   height: auto;
   background-size: cover;
@@ -16,7 +20,7 @@
 .information-button{
     
     position: absolute;
-    background-color: rgb(222, 74, 108);
+    background-color: darkcyan;
     color: white;
     padding: 10px;
     font-size: 16px;
@@ -58,7 +62,7 @@ height: 100%;
     margin: 5rem;
   border: 1px solid rgb(158, 13, 69);
   padding: 5px;
-  background-color:  rgb(222, 74, 108);
+  background-color: darkcyan;
   float: left;
   width: 20rem;
   border-radius: 5%;
@@ -66,7 +70,7 @@ height: 100%;
   }
   
   .news:hover {
-    border: 1px solid rgb(238, 162, 162);
+    border: 1px solid aquamarine;
   }
   
   .news img {
@@ -91,6 +95,7 @@ height: 100%;
     text-align: center;
     
 }
+
 
 
 
